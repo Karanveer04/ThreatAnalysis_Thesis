@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <eDFDFlowTracking:EDFD xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:eDFDFlowTracking="http://www.example.org/eDFDFlowTracking">
-  <asset>
-    <value/>
-  </asset>
-  <elements xsi:type="eDFDFlowTracking:Flow">
-    <assumption/>
-  </elements>
-  <elements xsi:type="eDFDFlowTracking:Process">
-    <outflows/>
-    <assumption/>
-    <responsibility/>
-  </elements>
-  <elements xsi:type="eDFDFlowTracking:DataStore">
-    <assumption/>
-  </elements>
-  <elements xsi:type="eDFDFlowTracking:ExternalEntity">
-    <outflows/>
-    <assumption/>
-  </elements>
+  <asset name=""/>
+  <elements xsi:type="eDFDFlowTracking:Flow"/>
+  <elements xsi:type="eDFDFlowTracking:Process" name="Place Vote" number="5"/>
+  <elements xsi:type="eDFDFlowTracking:DataStore"/>
+  <elements xsi:type="eDFDFlowTracking:ExternalEntity" name="Citizen" number="1"/>
+  <elements xsi:type="eDFDFlowTracking:Process"/>
+  <elements xsi:type="eDFDFlowTracking:Process"/>
+  <elements xsi:type="eDFDFlowTracking:Process"/>
+  <elements xsi:type="eDFDFlowTracking:DataStore"/>
+  <elements xsi:type="eDFDFlowTracking:Flow"/>
+  <elements xsi:type="eDFDFlowTracking:Flow"/>
+  <elements xsi:type="eDFDFlowTracking:Flow"/>
+  <elements xsi:type="eDFDFlowTracking:Flow"/>
+  <elements xsi:type="eDFDFlowTracking:Flow"/>
+  <elements xsi:type="eDFDFlowTracking:Flow"/>
+  <elements xsi:type="eDFDFlowTracking:Flow"/>
+  <elements xsi:type="eDFDFlowTracking:Flow"/>
 </eDFDFlowTracking:EDFD>

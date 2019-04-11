@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <eDFDFlowTracking:EDFD xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:eDFDFlowTracking="http://www.example.org/eDFDFlowTracking">
-  <asset name=""/>
   <elements xsi:type="eDFDFlowTracking:Flow" name="first" Channel="VLAN" target="Login" source="Citizen"/>
   <elements xsi:type="eDFDFlowTracking:Process" name="Place Vote" number="5"/>
   <elements xsi:type="eDFDFlowTracking:DataStore" name="User DB" number="3"/>
-  <elements xsi:type="eDFDFlowTracking:ExternalEntity" name="Citizen" number="1"/>
-  <elements xsi:type="eDFDFlowTracking:Process" name="Login" number="2"/>
-  <elements xsi:type="eDFDFlowTracking:Process" name="Citizen Client" number="4"/>
-  <elements xsi:type="eDFDFlowTracking:Process" name="View candidate program" number="7"/>
-  <elements xsi:type="eDFDFlowTracking:DataStore" name="Voting DB" number="6"/>
+  <elements xsi:type="eDFDFlowTracking:ExternalEntity" name="Citizen" number="1" inflows="second eighth"/>
+  <elements xsi:type="eDFDFlowTracking:Process" name="Login" number="2" inflows="first third"/>
+  <elements xsi:type="eDFDFlowTracking:Process" name="Citizen Client" number="4" inflows="fourth"/>
+  <elements xsi:type="eDFDFlowTracking:Process" name="View candidate program" number="7" inflows="candidate seventh"/>
+  <elements xsi:type="eDFDFlowTracking:DataStore" name="Voting DB" number="6" inflows="sixth"/>
   <elements xsi:type="eDFDFlowTracking:Flow" name="second" target="Citizen" source="Login"/>
-  <elements xsi:type="eDFDFlowTracking:Flow" name="third" target="Login" source="User DB"/>
-  <elements xsi:type="eDFDFlowTracking:Flow" name="fourth" target="Citizen Client" source="Login"/>
-  <elements xsi:type="eDFDFlowTracking:Flow" name="fifth " target="Place Vote View candidate program" source="Citizen Client"/>
-  <elements xsi:type="eDFDFlowTracking:Flow" name="sixth" target="Voting DB" source="Place Vote"/>
-  <elements xsi:type="eDFDFlowTracking:Flow" name="seventh" target="View candidate program" source="Voting DB"/>
-  <elements xsi:type="eDFDFlowTracking:Flow" name="eighth" target="Citizen" source="View candidate program"/>
-  <elements xsi:type="eDFDFlowTracking:Flow"/>
+  <elements xsi:type="eDFDFlowTracking:Flow" name="third" target="Login"/>
+  <elements xsi:type="eDFDFlowTracking:Flow" name="fourth" target="Citizen" source="Login"/>
+  <elements xsi:type="eDFDFlowTracking:Flow" name="fifth " source="Citizen"/>
+  <elements xsi:type="eDFDFlowTracking:Flow" name="sixth"/>
+  <elements xsi:type="eDFDFlowTracking:Flow" name="seventh"/>
+  <elements xsi:type="eDFDFlowTracking:Flow" name="eighth" target="Citizen" source="candidate"/>
+  <elements xsi:type="eDFDFlowTracking:Flow" name="candidate" source="Citizen"/>
 </eDFDFlowTracking:EDFD>

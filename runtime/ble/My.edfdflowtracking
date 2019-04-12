@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <eDFDFlowTracking:EDFD xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:eDFDFlowTracking="http://www.example.org/eDFDFlowTracking">
-  <elements xsi:type="eDFDFlowTracking:Flow" name="first" Channel="VLAN" target="Login" source="Citizen"/>
-  <elements xsi:type="eDFDFlowTracking:Process" name="Place Vote" number="5"/>
-  <elements xsi:type="eDFDFlowTracking:DataStore" name="User DB" number="3"/>
-  <elements xsi:type="eDFDFlowTracking:ExternalEntity" name="Citizen" number="1" inflows="second eighth"/>
-  <elements xsi:type="eDFDFlowTracking:Process" name="Login" number="2" inflows="first third"/>
-  <elements xsi:type="eDFDFlowTracking:Process" name="Citizen Client" number="4" inflows="fourth"/>
-  <elements xsi:type="eDFDFlowTracking:Process" name="View candidate program" number="7" inflows="candidate seventh"/>
-  <elements xsi:type="eDFDFlowTracking:DataStore" name="Voting DB" number="6" inflows="sixth"/>
-  <elements xsi:type="eDFDFlowTracking:Flow" name="second" target="Citizen" source="Login"/>
-  <elements xsi:type="eDFDFlowTracking:Flow" name="third" target="Login"/>
-  <elements xsi:type="eDFDFlowTracking:Flow" name="fourth" target="Citizen" source="Login"/>
-  <elements xsi:type="eDFDFlowTracking:Flow" name="fifth " source="Citizen"/>
-  <elements xsi:type="eDFDFlowTracking:Flow" name="sixth"/>
-  <elements xsi:type="eDFDFlowTracking:Flow" name="seventh"/>
-  <elements xsi:type="eDFDFlowTracking:Flow" name="eighth" target="Citizen" source="candidate"/>
-  <elements xsi:type="eDFDFlowTracking:Flow" name="candidate" source="Citizen"/>
+  <elements xsi:type="eDFDFlowTracking:Process" name="Place Vote" number="5">
+    <outflows name="seven" target="Voting DB" source="Place Vote"/>
+  </elements>
+  <elements xsi:type="eDFDFlowTracking:DataStore" name="User DB" number="3">
+    <outflows name="four" target="Login" source="User DB"/>
+  </elements>
+  <elements xsi:type="eDFDFlowTracking:ExternalEntity" name="Citizen" number="1">
+    <outflows name="first" Channel="VLAN" target="Login" source="Citizen"/>
+  </elements>
+  <elements xsi:type="eDFDFlowTracking:Process" name="Login" number="2">
+    <outflows name="second" target="Citizen" source="Login"/>
+    <outflows name="three" target="Citizen Client" source="Login"/>
+  </elements>
+  <elements xsi:type="eDFDFlowTracking:Process" name="Citizen Client" number="4">
+    <outflows name="five" target="Place Vote" source="Citizen Client"/>
+    <outflows name="six" target="View candidate program" source="Citizen Client"/>
+  </elements>
+  <elements xsi:type="eDFDFlowTracking:Process" name="View candidate program" number="7">
+    <outflows name="nine" target="Citizen" source="View candidate program"/>
+  </elements>
+  <elements xsi:type="eDFDFlowTracking:DataStore" name="Voting DB" number="6">
+    <outflows name="eight" target="View candidate program" source="Voting DB"/>
+  </elements>
 </eDFDFlowTracking:EDFD>

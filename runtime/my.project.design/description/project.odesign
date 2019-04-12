@@ -5,7 +5,7 @@
       <metamodel href="file:/C:/Users/Margit/New%20folder/test/model/eDFDFlowTracking1.ecore#/"/>
       <metamodel href="http://www.example.org/eDFDFlowTracking#/"/>
       <defaultLayer name="eDFDiagram">
-        <nodeMappings name="Asset" domainClass="eDFDFlowTracking::Asset">
+        <nodeMappings name="Asset" semanticCandidatesExpression="feature:asset" domainClass="eDFDFlowTracking::Asset">
           <borderedNodeMappings name="objectiveNode" semanticCandidatesExpression="feature:eAllContents" domainClass="eDFDFlowTracking::Objective">
             <borderedNodeMappings name="priorityNode" semanticCandidatesExpression="feature:eAllContents" domainClass="eDFDFlowTracking::Priority">
               <style xsi:type="style:LozengeNodeDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
@@ -26,8 +26,8 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="Assumption" domainClass="eDFDFlowTracking::Assumption">
-          <style xsi:type="style:DotDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+        <nodeMappings name="Assumption" semanticCandidatesExpression="feature:assumption" domainClass="eDFDFlowTracking::Assumption">
+          <style xsi:type="style:DotDescription" labelSize="12" labelExpression="" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
@@ -82,7 +82,7 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
           </style>
         </nodeMappings>
-        <edgeMappings name="Flow" sourceMapping="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='ExternalEntity'] //@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Process'] //@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='DataStore']" targetMapping="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='ExternalEntity'] //@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Process'] //@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='DataStore']" targetFinderExpression="feature::target" domainClass="eDFDFlowTracking::Flow" useDomainElement="true">
+        <edgeMappings name="Flow" sourceMapping="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='ExternalEntity'] //@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Process'] //@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='DataStore']" targetMapping="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='ExternalEntity'] //@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Process'] //@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='DataStore']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="eDFDFlowTracking::Flow" useDomainElement="true">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">

@@ -5,28 +5,7 @@
       <metamodel href="file:/C:/Users/Margit/New%20folder/test/model/eDFDFlowTracking1.ecore#/"/>
       <metamodel href="http://www.example.org/eDFDFlowTracking#/"/>
       <defaultLayer name="eDFDiagram">
-        <nodeMappings name="Asset" semanticCandidatesExpression="feature:asset" domainClass="eDFDFlowTracking::Asset">
-          <borderedNodeMappings name="objectiveNode" semanticCandidatesExpression="feature:eAllContents" domainClass="eDFDFlowTracking::Objective">
-            <borderedNodeMappings name="priorityNode" semanticCandidatesExpression="feature:eAllContents" domainClass="eDFDFlowTracking::Priority">
-              <style xsi:type="style:LozengeNodeDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-              </style>
-            </borderedNodeMappings>
-            <style xsi:type="style:LozengeNodeDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            </style>
-          </borderedNodeMappings>
-          <style xsi:type="style:NoteDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
-          </style>
-        </nodeMappings>
-        <nodeMappings name="Assumption" semanticCandidatesExpression="feature:assumption" domainClass="eDFDFlowTracking::Assumption">
+        <nodeMappings name="Assumption" domainClass="eDFDFlowTracking::Assumption">
           <style xsi:type="style:DotDescription" labelSize="12" labelExpression="" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -34,21 +13,21 @@
           </style>
         </nodeMappings>
         <nodeMappings name="DataStore" domainClass="eDFDFlowTracking::DataStore">
-          <style xsi:type="style:LozengeNodeDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+          <style xsi:type="style:LozengeNodeDescription" labelSize="12" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="ExternalEntity" domainClass="eDFDFlowTracking::ExternalEntity">
-          <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+          <style xsi:type="style:SquareDescription" labelSize="12" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="Process" domainClass="eDFDFlowTracking::Process">
-          <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+          <style xsi:type="style:EllipseNodeDescription" labelSize="12" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
@@ -91,7 +70,7 @@
           </style>
         </edgeMappings>
         <toolSections>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="createAsset" nodeMappings="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Asset']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createAsset">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>

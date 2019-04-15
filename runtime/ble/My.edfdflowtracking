@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <eDFDFlowTracking:EDFD xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:eDFDFlowTracking="http://www.example.org/eDFDFlowTracking">
+  <asset source="Citizen" targets="Login"/>
   <elements xsi:type="eDFDFlowTracking:Process" name="PlaceVote" number="5">
     <outflows name="seven" target="VotingDB" source="PlaceVote"/>
   </elements>
@@ -23,4 +24,11 @@
   <elements xsi:type="eDFDFlowTracking:DataStore" name="VotingDB" number="6">
     <outflows name="eight" target="ViewCandidateProgram" source="VotingDB"/>
   </elements>
+  <elements xsi:type="eDFDFlowTracking:Process" name="tata">
+    <outflows target="ttt" source="tata"/>
+  </elements>
+  <elements xsi:type="eDFDFlowTracking:Process" name="ttt">
+    <outflows target="name" source="ttt"/>
+  </elements>
+  <elements xsi:type="eDFDFlowTracking:Process" name="name"/>
 </eDFDFlowTracking:EDFD>

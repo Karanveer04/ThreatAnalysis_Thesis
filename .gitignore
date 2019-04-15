@@ -1,0 +1,5 @@
+/.metadata/
+workspace/Meta/bin/.gitignore
+workspace/Meta.tests/bin/.gitignore
+workspace/Meta.editor/bin/.gitignore
+workspace/Meta.edit/bin/.gitignore

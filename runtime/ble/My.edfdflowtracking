@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <eDFDFlowTracking:EDFD xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:eDFDFlowTracking="http://www.example.org/eDFDFlowTracking">
-  <asset source="Citizen" targets="Login"/>
-  <elements xsi:type="eDFDFlowTracking:Process" name="PlaceVote" number="5">
+  <asset name="1" source="Citizen" targets="Login">
+    <value/>
+  </asset>
+  <elements xsi:type="eDFDFlowTracking:Process" name="PlaceVote" number="5" assets="1">
     <outflows name="seven" target="VotingDB" source="PlaceVote"/>
   </elements>
   <elements xsi:type="eDFDFlowTracking:DataStore" name="UserDB" number="3">
     <outflows name="four" target="Login" source="UserDB"/>
   </elements>
-  <elements xsi:type="eDFDFlowTracking:ExternalEntity" name="Citizen" number="1">
+  <elements xsi:type="eDFDFlowTracking:ExternalEntity" name="Citizen" number="1" assets="1">
     <outflows name="first" Channel="VLAN" target="Login" source="Citizen"/>
   </elements>
   <elements xsi:type="eDFDFlowTracking:Process" name="Login" number="2">

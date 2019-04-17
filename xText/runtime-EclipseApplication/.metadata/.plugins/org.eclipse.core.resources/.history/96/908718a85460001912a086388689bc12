@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eDFDFlowTracking:EDFD xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:eDFDFlowTracking="http://www.example.org/eDFDFlowTracking">
+  <asset name="1" source="Citizen" targets="Login"/>
+  <elements xsi:type="eDFDFlowTracking:Process" name="PlaceVote" number="5" assets="1">
+    <outflows name="seven" target="VotingDB" source="PlaceVote"/>
+  </elements>
+  <elements xsi:type="eDFDFlowTracking:DataStore" name="UserDB" number="3">
+    <outflows name="four" target="Login" source="UserDB"/>
+  </elements>
+  <elements xsi:type="eDFDFlowTracking:ExternalEntity" name="Citizen" number="1">
+    <outflows name="first" Channel="VLAN" target="Login" source="Citizen"/>
+  </elements>
+  <elements xsi:type="eDFDFlowTracking:Process" name="Login" number="2">
+    <outflows name="second" target="Citizen" source="Login"/>
+    <outflows name="three" target="CitizenClient" source="Login"/>
+  </elements>
+  <elements xsi:type="eDFDFlowTracking:Process" name="CitizenClient" number="4">
+    <outflows name="five" target="PlaceVote" source="CitizenClient"/>
+    <outflows name="six" target="ViewCandidateProgram" source="CitizenClient"/>
+  </elements>
+  <elements xsi:type="eDFDFlowTracking:Process" name="ViewCandidateProgram" number="7">
+    <outflows name="nine" target="Citizen" source="ViewCandidateProgram"/>
+  </elements>
+  <elements xsi:type="eDFDFlowTracking:DataStore" name="VotingDB" number="6">
+    <outflows name="eight" target="ViewCandidateProgram" source="VotingDB"/>
+  </elements>
+  <elements xsi:type="eDFDFlowTracking:Process" name="tata">
+    <outflows target="ttt" source="tata"/>
+  </elements>
+  <elements xsi:type="eDFDFlowTracking:Process" name="ttt">
+    <outflows target="name" source="ttt"/>
+  </elements>
+  <elements xsi:type="eDFDFlowTracking:Process" name="name"/>
+</eDFDFlowTracking:EDFD>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;relation.odesign&apos; to &apos;description&apos;" description="Move &apos;relation.odesign&apos; to &apos;description&apos;" destination="description" element1="/test/relation.odesign" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1555073789944" updateReferences="true"/>
+</session>

@@ -8,17 +8,17 @@
           <style xsi:type="style:DotDescription" labelSize="12" labelExpression="" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="DataStore" domainClass="eDFDFlowTracking::DataStore">
+        <nodeMappings name="DataStore" doubleClickDescription="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@toolSections.0/@ownedTools[name='']" domainClass="eDFDFlowTracking::DataStore">
           <style xsi:type="style:LozengeNodeDescription" labelSize="12" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="ExternalEntity" domainClass="eDFDFlowTracking::ExternalEntity">
+        <nodeMappings name="ExternalEntity" doubleClickDescription="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@toolSections.0/@ownedTools[name='']" domainClass="eDFDFlowTracking::ExternalEntity">
           <borderedNodeMappings name="AssetEntity" semanticCandidatesExpression="feature:eAllContents" domainClass="eDFDFlowTracking::Asset">
             <borderedNodeMappings name="Value" semanticCandidatesExpression="feature:eAllContents" domainClass="eDFDFlowTracking::Value">
               <style xsi:type="style:DotDescription" labelSize="12" labelExpression="" labelPosition="node" resizeKind="NSEW">
@@ -39,7 +39,7 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="Process" domainClass="eDFDFlowTracking::Process">
+        <nodeMappings name="Process" doubleClickDescription="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@toolSections.0/@ownedTools[name='']" domainClass="eDFDFlowTracking::Process">
           <borderedNodeMappings name="AssetForProcessSource" semanticCandidatesExpression="feature:eAllContents" domainClass="eDFDFlowTracking::Asset">
             <borderedNodeMappings name="Value" semanticCandidatesExpression="feature:eAllContents" domainClass="eDFDFlowTracking::Value">
               <style xsi:type="style:DotDescription" labelSize="12" labelExpression="" labelPosition="node" resizeKind="NSEW">
@@ -72,7 +72,7 @@
             <style xsi:type="style:LozengeNodeDescription" labelSize="12" labelExpression="name::Name" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
             </style>
           </borderedNodeMappings>
           <style xsi:type="style:LozengeNodeDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
@@ -89,6 +89,22 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
+        <edgeMappings name="SourceToAsset" sourceMapping="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='DataStore'] //@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='ExternalEntity'] //@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Process']" targetMapping="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Asset']" targetFinderExpression="feature:assets">
+          <style lineStyle="dash" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="SourceToAssumption" sourceMapping="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Process'] //@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='DataStore'] //@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='ExternalEntity']" targetMapping="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Assumption']" targetFinderExpression="feature:assumption">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
         <toolSections name="tools">
           <ownedTools xsi:type="tool:NodeCreationDescription" name="createAsset" nodeMappings="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Asset']">
             <variable name="container"/>
@@ -96,10 +112,11 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="eDFDFlowTracking::Asset" referenceName="asset">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="value"/>
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="source">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="targets"/>
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="eDFDFlowTracking::Value">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="Objective" valueExpression="feature:Objective"/>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="Priority" valueExpression="feature:Priority"/>
                   </subModelOperations>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="value" valueExpression="feature:value"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
@@ -110,11 +127,12 @@
             <sourceViewVariable name="sourceView"/>
             <targetViewVariable name="targetView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="eDFDFlowTracking::Flow" referenceName="outflows">
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="var:source"/>
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="target" valueExpression="var:target"/>
                 </subModelOperations>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="outflows" valueExpression="feature:outflows"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -151,26 +169,65 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="createValue" nodeMappings="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Value']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="eDFDFlowTracking::Value" referenceName="value"/>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
           <ownedTools xsi:type="tool:NodeCreationDescription" name="createAssumption" nodeMappings="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Assumption']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="eDFDFlowTracking::Element" referenceName="elements">
-                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="eDFDFlowTracking::Assumption" referenceName="assumption">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="Objective"/>
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="Layer"/>
+                <subModelOperations xsi:type="tool_1:CreateInstance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="Objective" valueExpression="feature:Objective"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="Layer" valueExpression="feature:Layer"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="assumption" valueExpression="feature:assumption"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="CreateSourceToAsset" edgeMappings="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='SourceToAsset']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="assets" valueExpression="var:target">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:target">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="var:source"/>
                   </subModelOperations>
                 </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="CreateSourceToAssumption" edgeMappings="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='SourceToAssumption']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="eDFDFlowTracking::Assumption" referenceName="assumption">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="Objective" valueExpression="feature:Objective"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="Layer" valueExpression="feature:Layer"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="assumption" valueExpression="var:instance"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:SelectionWizardDescription" name="element" elementsToSelect="var:element" candidatesExpression="var:container">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="eDFDFlowTracking::Assumption" referenceName="assumption"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" mappings="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='DataStore'] //@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Process'] //@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='ExternalEntity']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="eDFDFlowTracking::Assumption" referenceName="assumption"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>

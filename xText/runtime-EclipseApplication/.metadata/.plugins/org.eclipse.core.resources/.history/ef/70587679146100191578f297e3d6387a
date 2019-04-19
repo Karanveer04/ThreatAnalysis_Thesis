@@ -1,0 +1,143 @@
+EDFD WebRTC[
+	assets: 
+		Asset AlicesMedia values: [L I], [H C], [H Av]
+			source: Alice
+			targets: Bob,
+		Asset BobsMedia values: [L I], [H C], [H Av]
+			source: Bob
+			targets: Alice,
+		Asset EncrAlicesMedia values: [L Av]
+			source: AliceBrowser
+			targets: BobBrowser,
+		Asset EncrBobsMedia values: [L Av]
+			source: BobBrowser
+			targets: AliceBrowser,
+		Asset AliceBrowserID values: [H I], [H C], [H Av]
+			source: AliceBrowser
+			targets: X,
+		Asset BobBrowserID values: [H I], [H C], [H Av]
+			source: BobBrowser
+			targets: Y,
+		Asset EncrAliceSessionData values: [H Av]
+			source: AliceBrowser
+			targets: BobBrowser,
+		Asset EncrBobSessionData values: [H Av]
+			source: BobBrowser
+			targets: AliceBrowser,
+			//the ports are not a secret because of the way the system works -> the browser ID is verified so the connection wont establish
+		Asset AlicePort values: [L Av]
+			source: AliceBrowser
+			targets: BobBrowser,
+		Asset BobPort values: [L Av]
+			source: BobBrowser
+			targets: AliceBrowser
+	elements:
+		ExternalEntity Alice[
+			assets: AlicesMedia, BobsMedia
+			incoming flows: "WebRTC.AliceBrowser.viewBobMedia"
+			outgoing flows: shareAliceMedia [num: 21 assets: AlicesMedia targets: AliceBrowser]
+		],
+		ExternalEntity Bob[
+			assets: AlicesMedia, BobsMedia
+			incoming flows: "WebRTC.BobBrowser.viewAliceMedia"
+			outgoing flows: shareBobMedia [num: 24 assets: BobsMedia targets: BobBrowser]
+		],
+		DataStore X[
+			assets: AliceBrowserID
+			incoming flows: "IDPX.storeGeneratedAliceBrowserID"
+			outgoing flows: getAliceBrowserID [num: 9 assets: AliceBrowserID targets: IDPX]
+		],
+		DataStore Y[
+			assets: BobBrowserID
+			incoming flows: "IDPY.storeGeneratedBobBrowserID"
+			outgoing flows: getBobBrowserID [num: 12 assets: BobBrowserID targets: IDPY]
+		],
+		Process IDPX[
+			responsibilities: [AliceBrowserID Forward:: AliceBrowserID], 
+				[AliceBrowserID Store::]
+			assets: AliceBrowserID
+			//Laurens DFD has additional incoming flow from BrowserB to IDPX - what asset goes here?
+			incoming flows: "X.getAliceBrowserID", "AliceBrowser.generateAliceBrowserID"
+			outgoing flows: provideAliceBroswerIDtoBob [num: 14 assets: AliceBrowserID targets: BobBrowser],
+							provideAliceBroswerIDtoAlice [num: 10 assets: AliceBrowserID targets: AliceBrowser],
+							storeGeneratedAliceBrowserID [num: 2 assets: AliceBrowserID targets: X]
+		],
+		Process IDPY[
+			responsibilities: [BobBrowserID Forward:: BobBrowserID], 
+				[BobBrowserID Store::]
+			assets: BobBrowserID
+			//Laurens DFD has additional incoming flow from BrowserA to IDPY - what asset goes here?
+			incoming flows: "Y.getBobBrowserID", "BobBrowser.generateBobBrowserID"
+			outgoing flows: provideBobBroswerIDtoAlice [num: 11 assets: BobBrowserID targets: AliceBrowser],
+							provideBobBroswerIDtoBob [num: 13 assets: BobBrowserID targets: BobBrowser],
+							storeGeneratedBobBrowserID [num: 4 assets: BobBrowserID targets: Y]
+		],
+		Process AliceBrowser[
+			//generate AlicebrowserID, generate AliceSessionData, forward Alicebrowserid, verify BobBrowserId, forward AliceMedia and BobsMedia
+			responsibilities: [AliceBrowserID Forward:: AliceBrowserID], 
+				[BobBrowserID, AlicePort, BobPort, AlicesMedia, BobsMedia User::], 
+				[BobsMedia Forward:: BobsMedia], 
+				[EncrAliceSessionData, EncrBobSessionData User::],
+				[AlicesMedia EncryptOrHash:: EncrAlicesMedia],
+				[EncrBobsMedia Decrypt:: BobsMedia]
+			assets: BobsMedia, EncrAliceSessionData, AlicesMedia, AliceBrowserID, BobBrowserID, EncrBobSessionData, AlicePort, BobPort, EncrBobsMedia, EncrAlicesMedia
+			incoming flows: "Alice.shareAliceMedia", "IDPY.provideBobBroswerIDtoAlice", "IDPX.provideAliceBroswerIDtoAlice", "Signaling_server.forwardBobSessionData", "STUN_TURNAlice.sendPortToTURNBob", "BobBrowser.sendBobsMediaToAliceBrowser"
+			//Laurens DFD additional outgoing (see IDPY)
+			outgoing flows: viewBobMedia [num: 26 assets: BobsMedia targets: Alice],
+							sendAliceSessionData [num: 5 assets: EncrAliceSessionData targets: Signaling_server],
+							sendAlicePort [num: 15 assets: AlicePort targets: STUN_TURNAlice],
+							sendAliceMediaToBobBrowser [num: 22 assets: EncrAlicesMedia targets: BobBrowser],
+							generateAliceBrowserID [num: 1 assets: AliceBrowserID targets: IDPX]
+		],
+		Process BobBrowser[
+			responsibilities: [BobBrowserID Forward:: BobBrowserID], 
+				[AliceBrowserID, AlicePort, BobPort User::], 
+				[AlicesMedia Forward:: AlicesMedia], 
+				[EncrAliceSessionData, EncrBobSessionData User::],
+				[BobsMedia EncryptOrHash:: EncrBobsMedia],
+				[EncrAlicesMedia Decrypt:: AlicesMedia]
+			assets: BobsMedia, EncrAliceSessionData, AlicesMedia, AliceBrowserID, BobBrowserID, EncrBobSessionData, AlicePort, BobPort, EncrBobsMedia, EncrAlicesMedia
+			incoming flows: "Bob.shareBobMedia", "IDPX.provideAliceBroswerIDtoBob", "IDPY.provideBobBroswerIDtoBob", "Signaling_server.forwardAliceSessionData", "STUN_TURNBob.sendPortToTURNAlice", "AliceBrowser.sendAliceMediaToBobBrowser"
+			//Laurens DFD additional outgoing (see IDPX)
+			outgoing flows: viewAliceMedia [num: 23 assets: AlicesMedia targets: Bob],
+							sendBobSessionData [num: 7 assets: EncrBobSessionData targets: Signaling_server],
+							sendBobPort [num: 18 assets: BobPort targets: STUN_TURNBob],
+							sendBobsMediaToAliceBrowser [num: 25 assets: EncrBobsMedia targets: AliceBrowser],
+							generateBobBrowserID [num: 3 assets: BobBrowserID targets: IDPY]
+		],
+		Process STUN_TURNAlice[
+			responsibilities: [BobPort Forward:: BobPort],
+							  [AlicePort Forward:: AlicePort]
+			assets: BobPort, AlicePort
+			incoming flows: "AliceBrowser.sendAlicePort", "STUN_TURNBob.sendPortToTURNAlice"
+			outgoing flows: sendPortToTURNBob [num: 16 assets: AlicePort targets: STUN_TURNBob],
+							forwardPortToAliceBroswer [num: 20 assets: BobPort targets: AliceBrowser]
+		],
+		Process STUN_TURNBob[
+			responsibilities: [BobPort, AlicePort Forward:: AlicePort, BobPort]
+			assets: BobPort, AlicePort
+			incoming flows: "STUN_TURNAlice.forwardPortToAliceBroswer", "BobBrowser.sendBobPort"
+			outgoing flows: sendPortToTURNAlice [num: 19 assets: BobPort targets: STUN_TURNAlice],
+							forwardPortToBobBroswer [num: 17 assets: AlicePort targets: BobBrowser]
+		],		
+		Process Signaling_server[
+			responsibilities: [EncrBobSessionData, EncrAliceSessionData Forward:: EncrBobSessionData, EncrAliceSessionData]
+			assets: EncrBobSessionData, EncrAliceSessionData
+			incoming flows: "AliceBrowser.sendAliceSessionData", "BobBrowser.sendBobSessionData"
+			outgoing flows: forwardBobSessionData [num: 8 assets: EncrBobSessionData targets: AliceBrowser],
+							forwardAliceSessionData [num: 6 assets: EncrAliceSessionData targets: BobBrowser]
+		]
+	attack zones:
+		OpenNetworkZone[
+			attacker profiles:
+				ExternalHacker [
+					observation: 1
+				]
+			elements: Alice, Bob, AliceBrowser, BobBrowser, IDPX, IDPY, X, Y, Signaling_server, STUN_TURNBob, STUN_TURNAlice
+		] 
+]
+
+
+
+
+

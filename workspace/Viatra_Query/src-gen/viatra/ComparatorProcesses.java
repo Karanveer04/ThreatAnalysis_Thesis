@@ -542,7 +542,7 @@ public final class ComparatorProcesses extends BaseGeneratedEMFQuerySpecificatio
           new Equality(body, var__virtual_1_, var_pr);
           // 	pr == ResponsibilityType::Comparator
           PVariable var__virtual_2_ = body.getOrCreateVariableByName(".virtual{2}");
-          new ConstantValue(body, var__virtual_2_, eDFDFlowTracking.ResponsibilityType.get("Comparator"));
+          new ConstantValue(body, var__virtual_2_, getEnumLiteral("http://www.example.org/eDFDFlowTracking", "ResponsibilityType", "Comparator").getInstance());
           new Equality(body, var_pr, var__virtual_2_);
           bodies.add(body);
       }

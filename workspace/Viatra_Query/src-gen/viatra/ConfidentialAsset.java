@@ -543,7 +543,7 @@ public final class ConfidentialAsset extends BaseGeneratedEMFQuerySpecification<
           new Equality(body, var__virtual_1_, var_o);
           // 	o == Objective::Confidentiality
           PVariable var__virtual_2_ = body.getOrCreateVariableByName(".virtual{2}");
-          new ConstantValue(body, var__virtual_2_, eDFDFlowTracking.Objective.get("Confidentiality"));
+          new ConstantValue(body, var__virtual_2_, getEnumLiteral("http://www.example.org/eDFDFlowTracking", "Objective", "Confidentiality").getInstance());
           new Equality(body, var_o, var__virtual_2_);
           bodies.add(body);
       }

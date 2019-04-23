@@ -545,7 +545,7 @@ public final class HighPriorityAsset extends BaseGeneratedEMFQuerySpecification<
           new Equality(body, var__virtual_1_, var_p);
           // 	p == Priority::H
           PVariable var__virtual_2_ = body.getOrCreateVariableByName(".virtual{2}");
-          new ConstantValue(body, var__virtual_2_, eDFDFlowTracking.Priority.get("H"));
+          new ConstantValue(body, var__virtual_2_, getEnumLiteral("http://www.example.org/eDFDFlowTracking", "Priority", "H").getInstance());
           new Equality(body, var_p, var__virtual_2_);
           bodies.add(body);
       }

@@ -1,0 +1,119 @@
+package viatra ;
+import "http://www.example.org/eDFDFlowTracking"
+
+pattern EDFD(edfd : EDFD){
+	EDFD(edfd);
+}
+
+
+pattern EDFDAsset(edfd : EDFD, a : Asset){
+	EDFD.asset(edfd, a);
+}
+
+pattern Boundaries(tb: TrustZone, edfd: EDFD){
+	EDFD.trustzones(edfd, tb);
+}
+
+pattern BoundariesAssets(a : Asset, tb: TrustZone){
+	TrustZone.elements.assets(tb, a);
+}
+
+pattern NodeElements(el : Element){
+	ExternalEntity(el);
+} or {
+	DataStore(el);
+} or {
+	Process(el);
+}
+
+pattern NodeElementsAssets(a : Asset, el : Element){
+	ExternalEntity.assets(el, a);
+} or {
+	DataStore.assets(el, a);
+} or {
+	Process.assets(el, a);
+}
+
+pattern EEandDSElement(el: Element){
+	ExternalEntity(el);
+} or {
+	DataStore(el);
+}
+
+pattern EEandDSAssetElement(a: Asset, el: Element){
+	ExternalEntity.assets(el, a);
+} or {
+	DataStore.assets(el, a);
+}
+
+pattern EEElements(ee : ExternalEntity, a: Asset){
+	ExternalEntity.assets(ee, a);
+}
+
+pattern EEElement(ee : ExternalEntity){
+	ExternalEntity(ee);
+}
+
+pattern AssetSource(el : Element, a: Asset){
+	Asset.source(a, el);
+}
+
+
+pattern DSElements(ds : DataStore){
+	DataStore(ds);
+}
+
+
+
+
+pattern ProcessElements(p : Process){
+	Process(p);
+}
+
+pattern ProcessElementsAssets(a : Asset, p : Process){
+	Process.assets(p, a);
+} 
+
+pattern FlowElements(el: Flow){
+	Flow(el);
+}
+
+pattern Assets(a: Asset){
+	Asset(a);
+}
+
+pattern Responsibilities(r: Responsibility){
+	Responsibility(r);
+}
+
+pattern ResponsibilityTypes(rt : ResponsibilityType){
+	ResponsibilityType(rt);
+}
+
+pattern sourceOfFlow(f : Flow, source : Element){
+	Flow.source(f, source);
+}
+
+pattern targetOfFlow(f : Flow, target : Element){
+	Flow.target(f, target);
+}
+
+//naming: Asset from source model = Asset from target model
+pattern highPriorityAsset(a : Asset){
+	Asset.value.Priority(a, p);
+	p == Priority::H;
+}
+pattern confidentialAsset(a: Asset){
+	Asset.value.Objective(a, o);
+	o == Objective::Confidentiality;
+}
+pattern publicAsset(a: Asset){
+	neg find confidentialAsset(a);
+}
+
+pattern comparatorProcesses(p : Process){
+	Process.responsibility.Action(p, pr);
+	pr == ResponsibilityType::Comparator;
+}
+
+

@@ -26,5 +26,5 @@ Export-Package: org.xtext.example.mydsl.ui,
  org.xtext.example.mydsl.ui.labeling,
  org.xtext.example.mydsl.ui.outline,
  org.xtext.example.mydsl.ui.quickfix,
- org.xtext.example.mydsl.validationorg.xtext.example.mydsl.ui
+ org.xtext.example.mydsl.validation
 Bundle-Activator: org.xtext.example.mydsl.ui.internal.MydslActivator

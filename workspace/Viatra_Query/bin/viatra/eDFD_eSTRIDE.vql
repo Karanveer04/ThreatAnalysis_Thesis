@@ -1,0 +1,6 @@
+package viatra;
+import "http://www.example.org/eDFDFlowTracking"
+
+pattern EDFD(edfd : EDFD){
+	EDFD(edfd);
+}

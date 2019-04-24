@@ -60,13 +60,6 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="Value" domainClass="eDFDFlowTracking::Value">
-          <style xsi:type="style:DotDescription" labelSize="12" labelExpression="" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
-          </style>
-        </nodeMappings>
         <nodeMappings name="Asset" domainClass="eDFDFlowTracking::Asset">
           <borderedNodeMappings name="Value" semanticCandidatesExpression="feature:eAllContents" domainClass="eDFDFlowTracking::Value">
             <style xsi:type="style:LozengeNodeDescription" labelSize="12" labelExpression="name::Name" labelPosition="node" resizeKind="NSEW">
@@ -112,11 +105,9 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="eDFDFlowTracking::Asset" referenceName="asset">
-                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="eDFDFlowTracking::Value">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="Objective" valueExpression="feature:Objective"/>
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="Priority" valueExpression="feature:Priority"/>
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="eDFDFlowTracking::Value" referenceName="value"/>
                   </subModelOperations>
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="value" valueExpression="feature:value"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>

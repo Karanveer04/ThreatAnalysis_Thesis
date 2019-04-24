@@ -6,11 +6,11 @@ EDFD DistriFriendMap[
 		Asset AliceLocation values: [H C] source: SNAPP targets: CreateMap, LocalDS,
 		Asset MapCode source: MapProvider targets: AliceWorkerNode,
 		Asset Map values: [H C] source: CreateMap targets: LocalDS, SNAPP
-	elements:
+	, Asset test values: [ ] source: LocalDS targets: FriendMap , Asset bleh values: [ ] source: FriendMap targets: LocalDS elements:
 		ExternalEntity FriendMap[
 			assets: ApplicationCode
 			//no incoming flows
-			outgoing flows: loadAppCode [num: 1 assets: ApplicationCode targets: AliceWorkerNode]
+			, bleh outgoing flows: loadAppCode [num: 1 assets: ApplicationCode targets: AliceWorkerNode]
 		],
 		ExternalEntity MapProvider[
 			assets: MapCode
@@ -24,7 +24,7 @@ EDFD DistriFriendMap[
 		],
 		DataStore LocalDS[
 			assets: BobsLocation, AliceLocation, Map
-			incoming flows: "AliceWorkerNode.storeLocal"
+			, test incoming flows: "AliceWorkerNode.storeLocal"
 			outgoing flows: readLocal [num: 10 assets: BobsLocation, AliceLocation, Map targets: AliceWorkerNode]
 		],
 		Process AliceWorkerNode[

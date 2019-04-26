@@ -1,6 +1,6 @@
 package org.xtext.example.mydsl;
 
-import java.io.File;
+import java.io.File; 
 import java.io.IOException;
 import java.util.HashMap;
 
@@ -23,10 +23,12 @@ public class bls {
 //        for (File f : new File("instances").listFiles()) {
 //            if (f.toString().endsWith(".mydsl")) {
         
-        System.out.println(f.toString());
+//        System.out.println(f.toString());
                 dfds.put(f, (EDFD) parser.parse(URI.createFileURI(f.toString())));
+
 //            }
 //        }
+                System.out.println(dfds.toString());
 //        dfds.put(f, (EDFD) parser.parse(URI.createFileURI(f.toString())));
 	}
 }

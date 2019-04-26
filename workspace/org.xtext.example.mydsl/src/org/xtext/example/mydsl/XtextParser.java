@@ -3,7 +3,7 @@ package org.xtext.example.mydsl;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Collections;
-
+import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;

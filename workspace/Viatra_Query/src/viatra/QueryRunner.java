@@ -2,6 +2,8 @@ package viatra;
 
 import viatra.*;
 
+import java.io.File;
+
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -20,28 +22,31 @@ import org.eclipse.viatra.query.runtime.registry.IQuerySpecificationRegistry;
 import org.eclipse.viatra.query.runtime.registry.QuerySpecificationRegistry;
 
 
-
-
 public class QueryRunner {
 	
 	private XtextResourceSet resourceSet;
 
 private EMFScope initializeModelScope() {
 	
-	setupParser();
+//	setupParser();
 	//XtextResourceSet resourceSet = new XtextResourceSet();
 	//URI uri = URI.createURI("src/YourDSLFile"); // your input textual file
-	Resource xtextResource = resourceSet.createResource(URI.createURI("/Viatra_Query/eDFD.mydsl"));//org.eclipse.emf.common.util.URI.createFileURI("Viatra_Query/eDFD.mydsl"), true);
+	
+//	File f = new File("/Users/Margit/git/Thesis/ArchitecturalThreatAnalysis/workspace/Viatra_Query/eDFD.mydsl");
+	
+	Resource xtextResource = resourceSet.getResource(URI.createFileURI("/Users/Margit/git/Thesis/ArchitecturalThreatAnalysis/workspace/Viatra_Query/eDFD.mydsl"), true);//org.eclipse.emf.common.util.URI.createFileURI("Viatra_Query/eDFD.mydsl"), true);
 
+//	File File = new File("/Users/Margit/git/Thesis/ArchitecturalThreatAnalysis/workspace/Viatra_Query/eDFD.mydsl");
+	
 	return new EMFScope(xtextResource);
 }
 
-private void setupParser() {
-	//Injector injector = new MyDslStandaloneSetup().createInjectorAndDoEMFRegistration();
-	Injector injector = new MyDslStandaloneSetup().createInjectorAndDoEMFRegistration();
-	resourceSet = injector.getInstance(XtextResourceSet.class);
-	getResourceSet().addLoadOption(XtextResource.OPTION_RESOLVE_ALL, Boolean.TRUE);
-}
+//private void setupParser() {
+//	//Injector injector = new MyDslStandaloneSetup().createInjectorAndDoEMFRegistration();
+//	//Injector injector = new MyDslStandaloneSetup().createInjectorAndDoEMFRegistration();
+//	//resourceSet = injector.getInstance(XtextResourceSet.class);
+//	getResourceSet().addLoadOption(XtextResource.OPTION_RESOLVE_ALL, Boolean.TRUE);
+//}
 
 private ViatraQueryEngine prepareQueryEngine(EMFScope scope) {
 	// Access managed query engine
@@ -71,12 +76,16 @@ public XtextResourceSet getResourceSet() {
 }
 
 public static void main(String[] args) {
+	
+	MyDslStandaloneSetup.doSetup();
 	QueryRunner me = new QueryRunner();
 	
 	
 //	me.setupParser();
 //	
 	EMFScope trial = me.initializeModelScope();
+	
+	System.out.println(trial);
 	ViatraQueryEngine bleh = me.prepareQueryEngine(trial);
 //
 	bleh.getCurrentMatchers();

@@ -30,7 +30,7 @@ public class bls {
 		
 		XtextParser parser = new XtextParser();
          
-        File f = new File("C:/Users/a296793/Desktop/nnw/ArchitecturalThreatAnalysis-feature/workspace/Viatra_Query/eDFD.mydsl");
+        File f = new File("C:/Users/Margit/git/Thesis/ArchitecturalThreatAnalysis/workspace/Viatra_Query/eDFD.mydsl");
         EObject e = parser.parse(URI.createFileURI(f.toString()));
         
         retrieve n = new retrieve();
@@ -90,11 +90,11 @@ public class bls {
         Set<Flow> Suggestions = new HashSet<>();
         for(int i = 0; i < n.getListsOfExternal(e).size(); i++) {
         	for(int j = 0 ; j < n.getListsOfExternal(e).get(i).getOutflows().size() ; j++) {
-        		for(int k = j+1 ; k < n.getListsOfExternal(e).get(i).getOutflows().size() ; k++) {
-        		if(n.getFlowsOfExternal(n.getListsOfExternal(e)).get(j).getTarget().equals(n.getFlowsOfExternal(n.getListsOfExternal(e)).get(k).getTarget())) {
+        		for(int k = 0 ; k < n.getListsOfExternal(e).get(i).getOutflows().size() ; k++) {
+        		if(j != k && n.getListsOfExternal(e).get(i).getOutflows().get(j).getTarget().equals(n.getListsOfExternal(e).get(i).getOutflows().get(k).getTarget())) {
         			//System.out.println("match" + n.getFlowsOfExternal(n.getListsOfExternal(e)).get(j));
-        			Suggestions.add(n.getFlowsOfExternal(n.getListsOfExternal(e)).get(j));
-        			Suggestions.add(n.getFlowsOfExternal(n.getListsOfExternal(e)).get(k));
+        			Suggestions.add(n.getListsOfExternal(e).get(i).getOutflows().get(j));
+        			Suggestions.add(n.getListsOfExternal(e).get(i).getOutflows().get(k));
         		}
         		else {
         		//	System.out.println("not match");
@@ -105,11 +105,13 @@ public class bls {
         
         for(int i = 0; i < n.getListsOfProcess(e).size(); i++) {
         	for(int j = 0 ; j < n.getListsOfProcess(e).get(i).getOutflows().size() ; j++) {
-        		for(int k = j+1 ; k < n.getListsOfProcess(e).get(i).getOutflows().size() ; k++) {
-        		if(n.getFlowsOfProcess(n.getListsOfProcess(e)).get(j).getTarget().equals(n.getFlowsOfProcess(n.getListsOfProcess(e)).get(k).getTarget())) {
+        		for(int k = 0 ; k < n.getListsOfProcess(e).get(i).getOutflows().size() ; k++) {
+        		if(j != k && n.getListsOfProcess(e).get(i).getOutflows().get(j).getTarget().equals(n.getListsOfProcess(e).get(i).getOutflows().get(k).getTarget())) {
         			//System.out.println("match" + n.getFlowsOfExternal(n.getListsOfExternal(e)).get(j));
-        			Suggestions.add(n.getFlowsOfProcess(n.getListsOfProcess(e)).get(j));
-        			Suggestions.add(n.getFlowsOfProcess(n.getListsOfProcess(e)).get(k));
+        			System.out.println(j);
+        			System.out.println(k);
+        			Suggestions.add(n.getListsOfProcess(e).get(i).getOutflows().get(j));
+        			Suggestions.add(n.getListsOfProcess(e).get(i).getOutflows().get(k));
         		}
         		else {
         			//System.out.println("not match");
@@ -120,11 +122,11 @@ public class bls {
         
         for(int i = 0; i < n.getListsOfDataStore(e).size(); i++) {
         	for(int j = 0 ; j < n.getListsOfDataStore(e).get(i).getOutflows().size() ; j++) {
-        		for(int k = j+1 ; k < n.getListsOfDataStore(e).get(i).getOutflows().size() ; k++) {
-        		if(n.getFlowsOfData(n.getListsOfDataStore(e)).get(j).getTarget().equals(n.getFlowsOfData(n.getListsOfDataStore(e)).get(k).getTarget())) {
+        		for(int k = 0 ; k < n.getListsOfDataStore(e).get(i).getOutflows().size() ; k++) {
+        		if(j != k && n.getListsOfDataStore(e).get(i).getOutflows().get(j).getTarget().equals(n.getListsOfDataStore(e).get(i).getOutflows().get(k).getTarget())) {
         			//System.out.println("match" + n.getFlowsOfExternal(n.getListsOfExternal(e)).get(j));
-        			Suggestions.add(n.getFlowsOfData(n.getListsOfDataStore(e)).get(j));
-        			Suggestions.add(n.getFlowsOfData(n.getListsOfDataStore(e)).get(k));
+        			Suggestions.add(n.getListsOfDataStore(e).get(i).getOutflows().get(j));
+        			Suggestions.add(n.getListsOfDataStore(e).get(i).getOutflows().get(k));
         		}
         		else {
         		//	System.out.println("not match");
@@ -134,15 +136,15 @@ public class bls {
         }
         
         System.out.println(Suggestions.size());
-        System.out.println(Suggestions.iterator().next().getSource().getAssets());
-      //  System.out.println(Suggestions.toString());
+//        System.out.println(Suggestions.iterator().next().getSource().getAssets());
+        System.out.println(Suggestions.toString());
         
         //store in the Suggestion list the flows that matches the target and their assets
 
         // 
         
-        System.out.println(Collections.singletonList(St));
-        System.out.println("loadAppCode: " + St.get("loadAppCode"));
+//        System.out.println(Collections.singletonList(St));
+//        System.out.println("loadAppCode: " + St.get("loadAppCode"));
 		/*
 		 * System.out.println(); System.out.println(as.get(1).getName() +
 		 * "Assetssadasdasdas"); System.out.println("Asset Name: " + as.get(0).getName()

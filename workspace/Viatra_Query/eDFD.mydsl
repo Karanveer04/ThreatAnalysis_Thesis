@@ -35,7 +35,7 @@ EDFD DistriFriendMap[
 			incoming flows: "LocalDS.readLocal", "SocialNetworkAPI.sendLocations", "CreateMap.getFriendMap", "MapServices.sendMap", "FriendMap.loadAppCode"
 			outgoing flows: requestLocations [num: 2 targets: SocialNetworkAPI],
 							requestEmptyMap [num: 6 targets: MapServices],
-							invokeFunction [num: 11 assets: BobsLocation, AliceLocation, MapCode targets: CreateMap],
+							invokeFunction [num: 11 assets: BobsLocation, AliceLocation, MapCode targets: MapServices],
 							post2SocialNetwork [num: 13 assets: Map targets: SocialNetworkAPI],
 							storeLocal [num: 10 assets: ApplicationCode, BobsLocation, AliceLocation, Map, MapCode targets: LocalDS]
 		],

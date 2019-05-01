@@ -16,17 +16,18 @@ import eDFDFlowTracking.Element;
 import eDFDFlowTracking.ExternalEntity;
 import eDFDFlowTracking.Flow;
 import eDFDFlowTracking.Process;
+import eDFDFlowTracking.Value;
 public class eSTRIDE {
 	
 	public static void main(String[] args) throws IOException {
 		
 		XtextParser parser = new XtextParser();
          
-		File f = new File("/Users/Karan/Git Projects/Thesis/ArchitecturalThreatAnalysis/workspace/Viatra_Query/eDFD.mydsl");
+		File f = new File("C:\\Users\\Karan\\Git Projects\\Thesis\\ArchitecturalThreatAnalysis\\runtime\\xText\\src\\eDFD.mydsl");
 		eDFDFlowTracking.EDFD contents = (EDFD) parser.parse(URI.createFileURI(f.toString()));
         
 		for(int i = 0; i < contents.getAsset().size(); i++) {
-	//		System.out.println(contents.getAsset().get(i) + " "+ contents.getAsset().get(i).getValue().get(0).getPriority());
+		//	System.out.println(contents.getAsset().get(i) + " "+ contents.getAsset().get(i).getValue().get(0).getPriority());
 		//	System.out.println(contents.getAsset().get(i));
 		}
 		
@@ -103,16 +104,33 @@ public class eSTRIDE {
         // Check outgoing flows for same Targets
         // Take first element and its flows     element->flow
         // Nested loop for checking same targets
-        
+       
         for(Element ee: contents.getElements()) {
         	for(Flow flow : ee.getOutflows()) {
         		for(Flow matchFlow : ee.getOutflows()) {
+
+        			boolean toBundle= true;
+
         			if(flow != matchFlow && flow.getTarget().equals(matchFlow.getTarget())) {
-        			//	if(!flow.getAssets().isEmpty() && !matchFlow.getAssets().isEmpty()){
-        					suggestionList.add(flow);
-        					suggestionList.add(matchFlow);
-            				// TODO: Find Asset Values to bundle low and medium 
-        			//	}
+        				if(!flow.getAssets().isEmpty() && !matchFlow.getAssets().isEmpty()){
+        					for(Value value : flow.getAssets().get(0).getValue()) {
+        						System.out.println("1st value: " + value);
+        						System.out.println("1st priority: " + value.getPriority());
+
+        						if(value.getPriority().getName().equals("H")) {
+        							toBundle = false;
+        						}
+        					}
+        					for(Value value : matchFlow.getAssets().get(0).getValue()) {
+        						if(value.getPriority().getName().equals("H")) {
+        							toBundle = false;
+        						}
+        					}
+        					if(toBundle) {
+        						suggestionList.add(flow);
+            					suggestionList.add(matchFlow);
+        					}
+        				}
         			}
         		}
         	}

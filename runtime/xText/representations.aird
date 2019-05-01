@@ -230,6 +230,17 @@
           <styles xmi:type="notation:ShapeStyle" xmi:id="_oxUeUWwEEemcooTJYa-ruw" fontName="Segoe UI" fontHeight="12"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oxUeUmwEEemcooTJYa-ruw" x="55" y="540" width="30" height="30"/>
         </children>
+        <children xmi:type="notation:Node" xmi:id="_16ndkGwJEemcooTJYa-ruw" type="2001" element="_16kaQGwJEemcooTJYa-ruw">
+          <children xmi:type="notation:Node" xmi:id="_16ndk2wJEemcooTJYa-ruw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_16ndlGwJEemcooTJYa-ruw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_16ndlWwJEemcooTJYa-ruw" type="3002" element="_16kaQWwJEemcooTJYa-ruw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_16ndlmwJEemcooTJYa-ruw" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_16ndl2wJEemcooTJYa-ruw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_16ndkWwJEemcooTJYa-ruw" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_16ndkmwJEemcooTJYa-ruw" x="490" y="295" width="30" height="30"/>
+        </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_9Ra-8mv8EemcooTJYa-ruw"/>
         <edges xmi:type="notation:Edge" xmi:id="__wn6YGv-EemcooTJYa-ruw" type="4001" element="__weJYGv-EemcooTJYa-ruw" source="_4QeYIGv9EemcooTJYa-ruw" target="_dQypIGv-EemcooTJYa-ruw">
           <children xmi:type="notation:Node" xmi:id="__wohcGv-EemcooTJYa-ruw" type="6001">
@@ -535,6 +546,22 @@
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_QJtZ9mwFEemcooTJYa-ruw" id="(0.01,0.39)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_QJtZ92wFEemcooTJYa-ruw" id="(1.0,0.4)"/>
         </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_16ndmGwJEemcooTJYa-ruw" type="4001" element="_16louGwJEemcooTJYa-ruw" source="_gSKIYGv-EemcooTJYa-ruw" target="_16ndkGwJEemcooTJYa-ruw">
+          <children xmi:type="notation:Node" xmi:id="_16ndnGwJEemcooTJYa-ruw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_16ndnWwJEemcooTJYa-ruw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_16ndnmwJEemcooTJYa-ruw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_16ndn2wJEemcooTJYa-ruw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_16ndoGwJEemcooTJYa-ruw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_16ndoWwJEemcooTJYa-ruw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_16ndmWwJEemcooTJYa-ruw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_16ndmmwJEemcooTJYa-ruw" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_16ndm2wJEemcooTJYa-ruw" points="[-50, -14, 620, 171]$[-655, -181, 15, 4]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_16pSwGwJEemcooTJYa-ruw" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_16pSwWwJEemcooTJYa-ruw" id="(0.5,0.5)"/>
+        </edges>
       </data>
     </ownedAnnotationEntries>
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_4QaGsGv9EemcooTJYa-ruw" name="Citizen" outgoingEdges="__weJYGv-EemcooTJYa-ruw _yG3qsGv_EemcooTJYa-ruw _qH46lGwCEemcooTJYa-ruw _uRjesGwCEemcooTJYa-ruw" incomingEdges="_GPPjoGv_EemcooTJYa-ruw _YCqh-Gv_EemcooTJYa-ruw _tqCgxmwEEemcooTJYa-ruw" width="10" height="10" resizeKind="NSEW">
@@ -559,7 +586,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Process']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_gSI6QGv-EemcooTJYa-ruw" name="Citizen Client" outgoingEdges="_QDx_3Gv_EemcooTJYa-ruw _WTki9Gv_EemcooTJYa-ruw" incomingEdges="_O8wGWGv_EemcooTJYa-ruw _A_QpLGwFEemcooTJYa-ruw" width="10" height="10" resizeKind="NORTH_SOUTH">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_gSI6QGv-EemcooTJYa-ruw" name="Citizen Client" outgoingEdges="_QDx_3Gv_EemcooTJYa-ruw _WTki9Gv_EemcooTJYa-ruw _16louGwJEemcooTJYa-ruw" incomingEdges="_O8wGWGv_EemcooTJYa-ruw _A_QpLGwFEemcooTJYa-ruw" width="10" height="10" resizeKind="NORTH_SOUTH">
       <target xmi:type="eDFDFlowTracking:Process" href="src/eDFD.mydsl#Citizen Client"/>
       <semanticElements xmi:type="eDFDFlowTracking:Process" href="src/eDFD.mydsl#Citizen Client"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -886,6 +913,22 @@
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_QJjB4WwFEemcooTJYa-ruw" labelSize="12"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_16kaQGwJEemcooTJYa-ruw" incomingEdges="_16louGwJEemcooTJYa-ruw" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="eDFDFlowTracking:Assumption" href="src/eDFD.mydsl#//@elements.2/@assumption.0"/>
+      <semanticElements xmi:type="eDFDFlowTracking:Assumption" href="src/eDFD.mydsl#//@elements.2/@assumption.0"/>
+      <ownedStyle xmi:type="diagram:Dot" uid="_16kaQWwJEemcooTJYa-ruw" labelSize="12" labelPosition="node" backgroundColor="253,206,137">
+        <description xmi:type="style:DotDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Assumption']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Assumption']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_16louGwJEemcooTJYa-ruw" sourceNode="_gSI6QGv-EemcooTJYa-ruw" targetNode="_16kaQGwJEemcooTJYa-ruw">
+      <target xmi:type="eDFDFlowTracking:Process" href="src/eDFD.mydsl#Citizen Client"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_16louWwJEemcooTJYa-ruw" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='SourceToAssumption']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_16loumwJEemcooTJYa-ruw" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='SourceToAssumption']"/>
     </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_9RYisWv8EemcooTJYa-ruw"/>

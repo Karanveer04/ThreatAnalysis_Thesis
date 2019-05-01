@@ -1,11 +1,10 @@
 package org.xtext.example.mydsl;
 
-import java.io.File; 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Set;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
@@ -18,237 +17,208 @@ import eDFDFlowTracking.ExternalEntity;
 import eDFDFlowTracking.Flow;
 import eDFDFlowTracking.Process;
 import eDFDFlowTracking.Value;
+
 public class eSTRIDE {
-	
+
 	public static void main(String[] args) throws IOException {
-		
+
 		XtextParser parser = new XtextParser();
-         
-		File f = new File("C:\\Users\\Karan\\Git Projects\\Thesis\\ArchitecturalThreatAnalysis\\runtime\\xText\\src\\eDFD.mydsl");
+
+		File f = new File(
+				"C:\\Users\\Karan\\Git Projects\\Thesis\\ArchitecturalThreatAnalysis\\runtime\\xText\\src\\eDFD.mydsl");
 		eDFDFlowTracking.EDFD contents = (EDFD) parser.parse(URI.createFileURI(f.toString()));
-        
-		for(int i = 0; i < contents.getAsset().size(); i++) {
-		//	System.out.println(contents.getAsset().get(i) + " "+ contents.getAsset().get(i).getValue().get(0).getPriority());
-		//	System.out.println(contents.getAsset().get(i));
-		}
-		
-		for(int i = 0; i < contents.getElements().size(); i++) {
-		//	System.out.println(contents.getElements().get(i));
-		}
+		/*
+		 * for(int i = 0; i < contents.getAsset().size(); i++) { //
+		 * System.out.println(contents.getAsset().get(i) + " "+
+		 * contents.getAsset().get(i).getValue().get(0).getPriority()); //
+		 * System.out.println(contents.getAsset().get(i)); }
+		 * 
+		 * for(int i = 0; i < contents.getElements().size(); i++) { //
+		 * System.out.println(contents.getElements().get(i)); }
+		 */
 		retrieveEDFDObject eDFD = new retrieveEDFDObject();
-        
-        ArrayList<String> stride_categories = new ArrayList<>();
-        stride_categories.add("Spoofing");
-        stride_categories.add("Tampering");
-        stride_categories.add("Repudiation");
-        stride_categories.add("Information Disclosure");
-        stride_categories.add("Denial of Service");
-        
-        Set<Flow> suggestionList = new HashSet<>();
 
-        HashMultimap<String,String> strideMap = HashMultimap.create();
-        
-        ArrayList<ExternalEntity> externalEntities = eDFD.getListsOfExternal(contents);
-        ArrayList<Process> processes = eDFD.getListsOfProcess(contents);
-        ArrayList<DataStore> dataStores = eDFD.getListsOfDataStore(contents);
-//        ArrayList<Flow> flow_process = eDFD.getFlowsOfProcess(processes);
-//        ArrayList<Flow> flow_externalEntities = eDFD.getFlowsOfExternal(externalEntities);
-//        ArrayList<Flow> flow_dataStores = eDFD.getFlowsOfData(dataStores);
-        
-        for(int i = 0; i < externalEntities.size(); i++) {	// External Entities	
-        	strideMap.put(externalEntities.get(i).getName(), stride_categories.get(0));
-        	strideMap.put(externalEntities.get(i).getName(), stride_categories.get(2));
-        }
-        
-        for(int i = 0; i < processes.size() ; i++) {	// Process
-        	strideMap.put(processes.get(i).getName(), stride_categories.get(0));
-        	strideMap.put(processes.get(i).getName(), stride_categories.get(1));
-        	strideMap.put(processes.get(i).getName(), stride_categories.get(2));
-        	strideMap.put(processes.get(i).getName(), stride_categories.get(3));
-        	strideMap.put(processes.get(i).getName(), stride_categories.get(4));
-        }
-        
-        for(int i = 0; i < dataStores.size() ; i++) {	// Data Store
-        	strideMap.put(dataStores.get(i).getName(), stride_categories.get(1));
-        	strideMap.put(dataStores.get(i).getName(), stride_categories.get(2)); // ??
-        	strideMap.put(dataStores.get(i).getName(), stride_categories.get(3));
-        	strideMap.put(dataStores.get(i).getName(), stride_categories.get(4));
-        }
- /*      
-        for(int i = 0 ; i < flow_process.size() ; i ++) { // Flows Process
-        	strideMap.put(flow_process.get(i).getName(), stride_categories.get(1));
-        	strideMap.put(flow_process.get(i).getName(), stride_categories.get(3));
-        	strideMap.put(flow_process.get(i).getName(), stride_categories.get(4));
-        }
-        
-        for(int i = 0 ; i < flow_externalEntities.size() ; i ++) {  //Flows EE
-        	strideMap.put(flow_externalEntities.get(i).getName(), stride_categories.get(1));
-        	strideMap.put(flow_externalEntities.get(i).getName(), stride_categories.get(3));
-        	strideMap.put(flow_externalEntities.get(i).getName(), stride_categories.get(4));
-        }
-        
-        for(int i = 0 ; i < flow_dataStores.size() ; i ++) {  //Flows DataStore
-        	strideMap.put(flow_dataStores.get(i).getName(), stride_categories.get(1));
-        	strideMap.put(flow_dataStores.get(i).getName(), stride_categories.get(3));
-        	strideMap.put(flow_dataStores.get(i).getName(), stride_categories.get(4));
-        }
-*/        
-        for(Element element: contents.getElements()) {
-        	for(Flow flow : element.getOutflows()) {
-        		strideMap.put(flow.getName(), stride_categories.get(1));
-        		strideMap.put(flow.getName(), stride_categories.get(3));
-        		strideMap.put(flow.getName(), stride_categories.get(4));
-        	}
-        }
-        
-        System.out.println(Collections.singletonList(strideMap));
-        // Check outgoing flows for same Targets
-        // Take first element and its flows     element->flow
-        // Nested loop for checking same targets
-       
-        for(Element ee: contents.getElements()) {
-        	for(Flow flow : ee.getOutflows()) {
-        		for(Flow matchFlow : ee.getOutflows()) {
+		ArrayList<String> stride_categories = new ArrayList<>();
+		stride_categories.add("Spoofing");
+		stride_categories.add("Tampering");
+		stride_categories.add("Repudiation");
+		stride_categories.add("Information Disclosure");
+		stride_categories.add("Denial of Service");
 
-        			boolean toBundle= true;
+		Set<Flow> suggestionList = new HashSet<>();
 
-        			if(flow != matchFlow && flow.getTarget().equals(matchFlow.getTarget())) {
-        				if(!flow.getAssets().isEmpty() && !matchFlow.getAssets().isEmpty()){
-        					for(Value value : flow.getAssets().get(0).getValue()) {
-        						System.out.println("1st value: " + value);
-        						System.out.println("1st priority: " + value.getPriority());
+		HashMultimap<String, String> strideMap = HashMultimap.create();
 
-        						if(value.getPriority().getName().equals("H")) {
-        							toBundle = false;
-        						}
-        					}
-        					for(Value value : matchFlow.getAssets().get(0).getValue()) {
-        						if(value.getPriority().getName().equals("H")) {
-        							toBundle = false;
-        						}
-        					}
-        					if(toBundle && flow.getChannel() == matchFlow.getChannel()) {
-        						suggestionList.add(flow);
-            					suggestionList.add(matchFlow);
-        					}
-        				}
-        			}
-        		}
-        	}
-        }
-        
-      //  System.out.println(suggestionList.size());
- 		//System.out.println(suggestionList.toString());
-        for (Flow temp : suggestionList) {
-            System.out.println("Flows that can be bundled: " + temp.getName());
-         }
-    //  store in the Suggestion list the flows that matches the target and their assets
- 		
+		ArrayList<ExternalEntity> externalEntities = eDFD.getListsOfExternal(contents);
+		ArrayList<Process> processes = eDFD.getListsOfProcess(contents);
+		ArrayList<DataStore> dataStores = eDFD.getListsOfDataStore(contents);
+		for (int i = 0; i < externalEntities.size(); i++) { // External Entities
+			strideMap.put(externalEntities.get(i).getName(), stride_categories.get(0));
+			strideMap.put(externalEntities.get(i).getName(), stride_categories.get(2));
+		}
+
+		for (int i = 0; i < processes.size(); i++) { // Process
+			strideMap.put(processes.get(i).getName(), stride_categories.get(0));
+			strideMap.put(processes.get(i).getName(), stride_categories.get(1));
+			strideMap.put(processes.get(i).getName(), stride_categories.get(2));
+			strideMap.put(processes.get(i).getName(), stride_categories.get(3));
+			strideMap.put(processes.get(i).getName(), stride_categories.get(4));
+		}
+
+		for (int i = 0; i < dataStores.size(); i++) { // Data Store
+			strideMap.put(dataStores.get(i).getName(), stride_categories.get(1));
+			strideMap.put(dataStores.get(i).getName(), stride_categories.get(2)); // ??
+			strideMap.put(dataStores.get(i).getName(), stride_categories.get(3));
+			strideMap.put(dataStores.get(i).getName(), stride_categories.get(4));
+		}
+
+		for (Element element : contents.getElements()) { // Flows
+			for (Flow flow : element.getOutflows()) {
+				strideMap.put(flow.getName(), stride_categories.get(1));
+				strideMap.put(flow.getName(), stride_categories.get(3));
+				strideMap.put(flow.getName(), stride_categories.get(4));
+			}
+		}
+
+		System.out.println("STRIDE MAP: " + Collections.singletonList(strideMap));
+
+// 		Data Bundling Process      
+		for (Element ee : contents.getElements()) {	// Get all elements
+			for (Flow flow : ee.getOutflows()) {	//Get all outflows for those elements
+				for (Flow matchFlow : ee.getOutflows()) {	//Get all outflows for the same element to compare
+
+					boolean toBundle = true;
+
+					if (flow != matchFlow && flow.getTarget().equals(matchFlow.getTarget())) {	// Check if flows have same target
+						if (!flow.getAssets().isEmpty() && !matchFlow.getAssets().isEmpty()) {	// Check if Assets are empty
+							for (Value value : flow.getAssets().get(0).getValue()) {	//Add only if the asset priority is low or medium
+								System.out.println("1st value: " + value);
+								System.out.println("1st priority: " + value.getPriority());
+
+								if (value.getPriority().getName().equals("H")) {	
+									toBundle = false;
+								}
+							}
+							for (Value value : matchFlow.getAssets().get(0).getValue()) {
+								if (value.getPriority().getName().equals("H")) {
+									toBundle = false;
+								}
+							}
+							if (toBundle && flow.getChannel() == matchFlow.getChannel()) {
+								suggestionList.add(flow);
+								suggestionList.add(matchFlow);
+							}
+						}
+					}
+				}
+			}
+		}
+
+//		System.out.println(suggestionList.size());
+//		System.out.println(suggestionList.toString());
+		for (Flow temp : suggestionList) {
+			System.out.println("Flows that can be bundled: " + temp.getName());
+		}
 	}
 }
 
 class retrieveEDFDObject {
-	
+
 	public ArrayList<Asset> getListsOfAssets(EObject e) {
-		
+
 		ArrayList<Asset> assets = new ArrayList<>();
-		for(int i = 0 ; i < e.eContents().size() ; i++) {
-        	try {
-        	assets.add((Asset) e.eContents().get(i));
-        	}
-        	catch (Exception es) {
+		for (int i = 0; i < e.eContents().size(); i++) {
+			try {
+				assets.add((Asset) e.eContents().get(i));
+			} catch (Exception es) {
 				// TODO: handle exception
-        	}
+			}
 		}
-		return assets;		
+		return assets;
 	}
-	
+
 	public ArrayList<Process> getListsOfProcess(EObject e) {
-		
+
 		ArrayList<Process> processes = new ArrayList<>();
-		for(int i = 0 ; i < e.eContents().size() ; i++) {
-        	try {
-        	processes.add((Process) e.eContents().get(i));
-        	}
-        	catch (Exception es) {
+		for (int i = 0; i < e.eContents().size(); i++) {
+			try {
+				processes.add((Process) e.eContents().get(i));
+			} catch (Exception es) {
 				// TODO: handle exception
-        	}
+			}
 		}
-		return processes;		
+		return processes;
 	}
-	
-	
+
 	public ArrayList<ExternalEntity> getListsOfExternal(EObject e) {
-		
+
 		ArrayList<ExternalEntity> externalEntities = new ArrayList<>();
-		for(int i = 0 ; i < e.eContents().size() ; i++) {
-        	try {
-        	externalEntities.add((ExternalEntity) e.eContents().get(i));
-        	}
-        	catch (Exception es) {
+		for (int i = 0; i < e.eContents().size(); i++) {
+			try {
+				externalEntities.add((ExternalEntity) e.eContents().get(i));
+			} catch (Exception es) {
 				// TODO: handle exception
-        	}
+			}
 		}
-		return externalEntities;	
+		return externalEntities;
 	}
-	
+
 	public ArrayList<DataStore> getListsOfDataStore(EObject e) {
-		
+
 		ArrayList<DataStore> dataStores = new ArrayList<>();
-		for(int i = 0 ; i < e.eContents().size() ; i++) {
-        	try {
-        	dataStores.add((DataStore) e.eContents().get(i));
-        	}
-        	catch (Exception es) {
+		for (int i = 0; i < e.eContents().size(); i++) {
+			try {
+				dataStores.add((DataStore) e.eContents().get(i));
+			} catch (Exception es) {
 				// TODO: handle exception
-        	}
+			}
 		}
-		return dataStores;		
+		return dataStores;
 	}
-	
-	public ArrayList<Flow> getFlowsOfProcess(ArrayList<Process> list){
-		
+
+	public ArrayList<Flow> getFlowsOfProcess(ArrayList<Process> list) {
+
 		ArrayList<Flow> flowsOfProcess = new ArrayList<>();
-		 for(int i = 0 ; i < list.size() ; i++) {
-	        	for(int j = 0 ; j < list.get(i).getOutflows().size() ; j++) {
-	        	flowsOfProcess.add((Flow) list.get(i).getOutflows().get(j));
-	        }
-	        }
-		 return flowsOfProcess;
+		for (int i = 0; i < list.size(); i++) {
+			for (int j = 0; j < list.get(i).getOutflows().size(); j++) {
+				flowsOfProcess.add((Flow) list.get(i).getOutflows().get(j));
+			}
+		}
+		return flowsOfProcess;
 	}
-	
-	public ArrayList<Flow> getFlowsOfExternal(ArrayList<ExternalEntity> list){
-		
+
+	public ArrayList<Flow> getFlowsOfExternal(ArrayList<ExternalEntity> list) {
+
 		ArrayList<Flow> flowsOfExternalEntities = new ArrayList<>();
-		 for(int i = 0 ; i < list.size() ; i++) {
-	        	for(int j = 0 ; j < list.get(i).getOutflows().size() ; j++) {
-	        	flowsOfExternalEntities.add((Flow) list.get(i).getOutflows().get(j));
-	        }
-	        }
-		 return flowsOfExternalEntities;
+		for (int i = 0; i < list.size(); i++) {
+			for (int j = 0; j < list.get(i).getOutflows().size(); j++) {
+				flowsOfExternalEntities.add((Flow) list.get(i).getOutflows().get(j));
+			}
+		}
+		return flowsOfExternalEntities;
 	}
-	
-	public ArrayList<Flow> getFlowsOfData(ArrayList<DataStore> list){
-		
+
+	public ArrayList<Flow> getFlowsOfData(ArrayList<DataStore> list) {
+
 		ArrayList<Flow> flowsOfData = new ArrayList<>();
-		 for(int i = 0 ; i < list.size() ; i++) {
-	        	for(int j = 0 ; j < list.get(i).getOutflows().size() ; j++) {
-	        	flowsOfData.add((Flow) list.get(i).getOutflows().get(j));
-	        }
-	        }
-		 return flowsOfData;
+		for (int i = 0; i < list.size(); i++) {
+			for (int j = 0; j < list.get(i).getOutflows().size(); j++) {
+				flowsOfData.add((Flow) list.get(i).getOutflows().get(j));
+			}
+		}
+		return flowsOfData;
 	}
+/*
+	public ArrayList<Flow> getFlowsOfElement(ArrayList<eDFDFlowTracking.Element> list) {
 
-	public ArrayList<Flow> getFlowsOfElement(ArrayList<eDFDFlowTracking.Element> list){
-		
 		ArrayList<Flow> flowsOfElement = new ArrayList<>();
-		for(int i = 0 ; i < list.size() ; i++) {
-	        	for(int j = 0 ; j < list.get(i).getOutflows().size() ; j++) {
-	        	flowsOfElement.add((Flow) list.get(i).getOutflows().get(j));
-	        	}
-	        }
-		 return flowsOfElement;
+		for (int i = 0; i < list.size(); i++) {
+			for (int j = 0; j < list.get(i).getOutflows().size(); j++) {
+				flowsOfElement.add((Flow) list.get(i).getOutflows().get(j));
+			}
+		}
+		return flowsOfElement;
 	}
+*/
 
-	
 }

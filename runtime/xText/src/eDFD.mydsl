@@ -5,7 +5,7 @@ EDFD DistriFriendMap[
 		Asset BobsLocation values: [H C] source: SNAPP targets: CreateMap, LocalDS,
 		Asset AliceLocation values: [H C] source: SNAPP targets: CreateMap, LocalDS,
 		Asset MapCode source: MapProvider targets: AliceWorkerNode,
-		Asset Map values: [H C] source: CreateMap targets: LocalDS, SNAPP
+		Asset Map values: [H C],[H I]  source: CreateMap targets: LocalDS, SNAPP
 	, Asset test values: [ ] source: LocalDS targets: FriendMap , Asset bleh values: [ ] source: FriendMap targets: LocalDS elements:
 		ExternalEntity FriendMap[
 			assets: ApplicationCode

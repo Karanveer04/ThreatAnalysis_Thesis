@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
@@ -126,7 +127,7 @@ public class eSTRIDE {
         							toBundle = false;
         						}
         					}
-        					if(toBundle) {
+        					if(toBundle && flow.getChannel() == matchFlow.getChannel()) {
         						suggestionList.add(flow);
             					suggestionList.add(matchFlow);
         					}
@@ -136,8 +137,11 @@ public class eSTRIDE {
         	}
         }
         
-        System.out.println(suggestionList.size());
- 		System.out.println(suggestionList.toString());        
+      //  System.out.println(suggestionList.size());
+ 		//System.out.println(suggestionList.toString());
+        for (Flow temp : suggestionList) {
+            System.out.println("Flows that can be bundled: " + temp.getName());
+         }
     //  store in the Suggestion list the flows that matches the target and their assets
  		
 	}

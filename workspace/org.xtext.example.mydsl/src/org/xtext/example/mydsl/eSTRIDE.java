@@ -3,7 +3,6 @@ package org.xtext.example.mydsl;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -59,20 +58,17 @@ public class eSTRIDE {
 		security_objectives.add("Availability");
 		security_objectives.add("Authorization");
 
-		HashMap<String, String> eSTRIDE_table = new HashMap<>();
-		eSTRIDE_table.put(stride_categories.get(0), security_objectives.get(0));
-		eSTRIDE_table.put(stride_categories.get(1), security_objectives.get(1));
-		eSTRIDE_table.put(stride_categories.get(2), security_objectives.get(2));
-		eSTRIDE_table.put(stride_categories.get(3), security_objectives.get(3));
-		eSTRIDE_table.put(stride_categories.get(4), security_objectives.get(4));
-		eSTRIDE_table.put(stride_categories.get(5), security_objectives.get(5));
-
-//		System.out.println(Collections.singletonList(eSTRIDE_table));
+		HashMap<String, String> mapped_table = new HashMap<>();
+		for(int i = 0 ; i <=5 ; i++) {
+			mapped_table.put(security_objectives.get(i), stride_categories.get(i));
+		}
+		
+	//	System.out.println(Collections.singletonList(mapped_table));
 
 		Set<Flow> suggestionList = new HashSet<>();
 
 		HashMultimap<String, String> strideMap = HashMultimap.create();
-
+		
 		ArrayList<ExternalEntity> externalEntities = eDFD.getListsOfExternal(contents);
 		ArrayList<Process> processes = eDFD.getListsOfProcess(contents);
 		ArrayList<DataStore> dataStores = eDFD.getListsOfDataStore(contents);
@@ -105,7 +101,15 @@ public class eSTRIDE {
 			}
 		}
 
-		System.out.println("STRIDE MAP: " + Collections.singletonList(strideMap));
+//		System.out.println("STRIDE MAP: " + Collections.singletonList(strideMap));
+	
+//		for(String keys : strideMap.keySet()) {
+//			System.out.println(keys + " :   " +strideMap.get(keys));
+//		}
+//		System.out.println(strideMap.keySet().size());
+		
+		
+		
 
 //------Data Bundling Process---------------------------      
 		for (Element ee : contents.getElements()) { // Get all elements
@@ -152,111 +156,268 @@ public class eSTRIDE {
 		
 		
 //------eSTRIDE----------------------------------- 
-		System.out.println();
-		for (int i = 0; i < contents.getElements().size(); i++) { // go through elements
-			if (!contents.getElements().get(i).getAssets().isEmpty()) { // check if assets are not empty for elements
 
-				if (!contents.getElements().get(i).getAssets().get(0).getValue().isEmpty()) { // check if values are not
-																								// empty for assets
-					for (int j = 0; j < contents.getElements().get(i).getAssets().size(); j++) {
-						
-						for (int k = 0; k < contents.getElements().get(i).getAssets().get(j).getValue().size(); k++) {
-							System.out.println(
-									"\n Element: " + contents.getElements().get(i).getName() +
-									"\n Assets Name: " + contents.getElements().get(i).getAssets().get(j).getName() +
-									"\n  Asset Objective: "+ contents.getElements().get(i).getAssets().get(j).getValue().get(k).getObjective() +
-									"\n  Asset Priority: "+ contents.getElements().get(i).getAssets().get(j).getValue().get(k).getPriority() );// get k
-																														
-						}
-					}
+		
+ArrayList<Element> elementAssetsList = new ArrayList<Element>();
+
+ArrayList<Flow> flowAssetsList = new ArrayList<Flow>();
+
+// GET ASSETS FOR ELEMENTS
+for(Element e : contents.getElements()) {	//go through elements
+	if(!e.getAssets().isEmpty()) {	//check element asset not empty
+		for(int i =0; i < e.getAssets().size(); i++) {	// go through elements assets (i)
+			if(!e.getAssets().get(i).getValue().isEmpty()) {	//check assets values not empty
+				for(int j = 0 ; j < e.getAssets().get(i).getValue().size() ; j++) {	//go through asset values (j)
+					elementAssetsList.add(e);
+//					System.out.println(
+//							"\n  Element: " + e.getName() +
+//							"\n  Assets Name: " + e.getAssets().get(i).getName() +
+//							"\n  Asset Objective: "+ e.getAssets().get(i).getValue().get(j).getObjective());
 				}
 			}
-//		System.out.println();
-
-//		for(int i = 0 ; i < contents.getAsset().size() ; i++) {
-//			if(!contents.getAsset().isEmpty()) {
-//				System.out.println("Assets: " + contents.getAsset() + " Values: " + contents.getAsset().get(i).getValue() +
-//						" Objective " + contents.getAsset().get(i).getValue().get(i).getObjective() + " Priority " + contents.getAsset().get(i).getValue().get(i).getPriority());
-//			}
 		}
-//-------------------------------------------------------------------
+	}
+//System.out.println(elementAssetsList.toString());
+// GET ASSETS FOR FLOWS	
+	for(Flow flow : e.getOutflows()) {
+		if(!flow.getAssets().isEmpty()) {
+			for(int i =0; i < flow.getAssets().size(); i++) {
+				if(!flow.getAssets().get(i).getValue().isEmpty()) {	//check assets values not empty
+					for(int j = 0 ; j < flow.getAssets().get(i).getValue().size() ; j++) {	//go through asset values (j)
+						flowAssetsList.add(flow);
+//						System.out.println(
+//								"\n  Flow: " + flow.getName() +
+//								"\n  Assets Name: " + flow.getAssets().get(i).getName() +
+//								"\n  Asset Objective: "+ flow.getAssets().get(i).getValue().get(j).getObjective());
+					}
+				}
+			}
+		}
+	}
+	
+}
 
-//------Process Folding----------------------------------------------
-		Set<Process> suggestionListPr = new HashSet<>();
-		Set<Process> suggestionListObj = new HashSet<>();
-		Set<Process> suggestionListPrFlow = new HashSet<>();
-		Set<Process> suggestionListAssumptionNot = new HashSet<>();
+// MAPPING 
+		HashMultimap<String, String> eSTRIDE_table = HashMultimap.create();;
+		
+		ArrayList<String> keyList_strideMap = new ArrayList<>();
+		for(String keys : strideMap.keySet()) {		// Get keys from Stride Map
+			keyList_strideMap.add(keys);
+		}
 
-		for (Process p : processes) { // Get Inflows too
-			boolean isCritical = false;
-			if (!p.getAssets().isEmpty()) {
-				for (Asset as : p.getAssets()) {
-					for (Value v : as.getValue()) {
-						if (v.getPriority().getName().equals("H")) {
-							System.out.println("NO Folding possible");
-							isCritical = true;
+		ArrayList<String> keyList_mappedTable = new ArrayList<>();
+		for(String keys : mapped_table.keySet()) {		// Get keys from Mapped Table
+			keyList_mappedTable.add(keys);
+		}
+		
+//		System.out.println("Mapped table : " +Collections.singletonList(mapped_table));		
+//		System.out.println(Collections.singletonList(keyList));
+		
+		// Go through stride map and take the first element
+		// Get Assets Name and Objectives from above
+		// Check if Asset exists in the stride map 		
+		// Go through Mapped Table to get all the security obj
+		// Compare Assets Objectives with Sec objectives(mapped table)
+		// If any assets objective matches the table and priority is H, we add to eSTRIDE Table		
+			System.out.println();	
+// ESTRIDE ELEMENTS
+			for(int j = 0 ; j < elementAssetsList.size() ; j++) {	// Go through AssetList of elements
+				
+				for(int k = 0 ; k < elementAssetsList.get(j).getAssets().size() ; k++) {	// Go through elements assets
+					
+					for(int l = 0; l < elementAssetsList.get(j).getAssets().get(k).getValue().size(); l++) {	// Go through assets values
+						
+						for(int m = 0 ; m < keyList_mappedTable.size(); m++) {		// Go through keyList for mappedTable
+							//
+							if(elementAssetsList.get(j).getAssets().get(k).getValue().get(l).getObjective().getName().equals(keyList_mappedTable.get(m))) {	// Compare Assets objective with mappedTable
+					
+								if(elementAssetsList.get(j).getAssets().get(k).getValue().get(l).getPriority().getName().equals("H") 
+										|| elementAssetsList.get(j).getAssets().get(k).getValue().get(l).getPriority().getName().equals("M")){
+									
+//									System.out.println("Name: "+elementAssetsList.get(j).getName() 
+//											+"  Matches: " + elementAssetsList.get(j).getAssets().get(k).getValue().get(l).getObjective().getName() 
+//											+"  has priority: "+ elementAssetsList.get(j).getAssets().get(k).getValue().get(l).getPriority()
+//											+"  STRIDE Category: " + mapped_table.get(elementAssetsList.get(j).getAssets().get(k).getValue().get(l).getObjective().getName()));
+									//check if stridemap for key element.name and corresponding values if includes S or E and add if does									
+									eSTRIDE_table.put(elementAssetsList.get(j).getName(),mapped_table.get(elementAssetsList.get(j).getAssets().get(k).getValue().get(l).getObjective().getName()));
+								}						
+							}
+								if (strideMap.get(elementAssetsList.get(j).getName()).contains("Spoofing")) {
+									// System.out.println(strideMap.get(elementAssetsList.get(j).getName()) + "" +
+									// elementAssetsList.get(j).getName());
+									eSTRIDE_table.put(elementAssetsList.get(j).getName(), "Spoofing");
+								}
+								if (strideMap.get(elementAssetsList.get(j).getName()).contains("Elevation of Privilege")) {
+									// System.out.println(strideMap.get(elementAssetsList.get(j).getName()) + "" +
+									// elementAssetsList.get(j).getName());
+									eSTRIDE_table.put(elementAssetsList.get(j).getName(), "Elevation of Privilege");
+								}
 						}
 					}
 				}
 			}
 
-			if (isCritical == false) {
-				for (int i = 0; i < processes.size(); i++) {
-					ArrayList<Flow> srcTar = new ArrayList<>();
-					for (Flow outflow : p.getOutflows()) {// check for priorities of flows that dont go to process
-						if (outflow.getTarget().get(0).getName().equals(processes.get(i).getName())) { // Target check
-																										// and get flows
-																										// between
-																										// source and
-																										// target, check
-																										// if
-																										// Process.get(i)
-																										// is critical
-							srcTar.add(outflow);
-							// Outflow check for carrying assets
-							Iterator<Asset> iterator = outflow.getAssets().iterator();
-							while (iterator.hasNext()) {
-								for (Value val : iterator.next().getValue()) {
-									// Get first process and check surrounding assumptions that are assigned,
-									// if ass = true, check, if ass = false, Make an assumption
-
-									if (!p.getAssumption().isEmpty()) {
-										Iterator<Assumption> assumptionIt = p.getAssumption().iterator();
-										while (assumptionIt.hasNext()) {
-											for (Objective obj : assumptionIt.next().getObjective()) {
-												// Check assumption objective value == assets objective value,
-												// suggestion list
-												if (obj.getName().equals(val.getObjective().getName())) {
-													suggestionListObj.add(p); // Objectives Matched
-												}
-												suggestionListAssumptionNot.add(p); // Objectives do not match
-											}
+// ESTRIDE FLOWS
+			for(int j = 0 ; j < flowAssetsList.size() ; j++) {	// Go through AssetList of flow
+							
+							for(int k = 0 ; k < flowAssetsList.get(j).getAssets().size() ; k++) {	// Go through flow assets
+								
+								for(int l = 0; l < flowAssetsList.get(j).getAssets().get(k).getValue().size(); l++) {	// Go through assets values
+									
+									for(int m = 0 ; m < keyList_mappedTable.size(); m++) {		// Go through keyList for mappedTable
+										
+										if(flowAssetsList.get(j).getAssets().get(k).getValue().get(l).getObjective().getName().equals(keyList_mappedTable.get(m))) {	// Compare Assets objective with mappedTable
+								
+											if(flowAssetsList.get(j).getAssets().get(k).getValue().get(l).getPriority().getName().equals("H") 
+													|| flowAssetsList.get(j).getAssets().get(k).getValue().get(l).getPriority().getName().equals("M")){
+												
+												
+//												System.out.println("Name: "+elementAssetsList.get(j).getName() 
+//														+"  Matches: " + elementAssetsList.get(j).getAssets().get(k).getValue().get(l).getObjective().getName() 
+//														+"  has priority: "+ elementAssetsList.get(j).getAssets().get(k).getValue().get(l).getPriority()
+//														+"  STRIDE Category: " + mapped_table.get(elementAssetsList.get(j).getAssets().get(k).getValue().get(l).getObjective().getName()));
+												eSTRIDE_table.put(flowAssetsList.get(j).getName(),mapped_table.get(flowAssetsList.get(j).getAssets().get(k).getValue().get(l).getObjective().getName()));
+											}	
 										}
-									} else {
-										suggestionListPr.add(p); // No assumption made
 									}
-
 								}
 							}
 						}
-					}
-					// Check flows have same channel then suggestion
-					boolean isSame = true;
-					for (int j = 0; j < srcTar.size(); j++) {
-						if (srcTar.get(j).getChannel().getName() != srcTar.get(0).getChannel().getName()) {
-							isSame = false;
-							break;
-						}
-					}
-					if (isSame == true) {
-						Collection<Process> pr = new ArrayList<>();
-						pr.add(processes.get(i));
-						pr.add(p);
-						suggestionListPrFlow.addAll(pr);
-					}
+
+			System.out.println("eSTRIDE Table is : " + Collections.singletonList(eSTRIDE_table));
+//-------------------------------------------------------------------
+
+//------Process Folding----------------------------------------------
+			Set<Process> suggestionListPr = new HashSet<>();
+			Set<Process> suggestionListObj = new HashSet<>();
+			Set<Process> suggestionListPrFlow = new HashSet<>();
+			Set<Process> suggestionListAssumptionNot = new HashSet<>();
+			ArrayList<Process> nonCriticalProcess = new ArrayList<>();
+			ArrayList<ArrayList<Process>> pair = new ArrayList<ArrayList<Process>>();
+			ArrayList<ArrayList<Process>> finalPair = new ArrayList<ArrayList<Process>>();
+			
+			for (Process p : processes) { // Get Inflows too
+				boolean isCritical = false;
+				if(!p.getAssets().isEmpty()){
+				for(Asset as: p.getAssets()) {//we should actually check the inflows and outflows as well , unless our model adds all assets to a Process
+				for(Value v: as.getValue())  {
+					if (v.getPriority().getName().equals("H")) {
+	//					System.out.println("NO Folding possible : " + p.getName());
+						isCritical = true;
+					} 
 				}
+				}
+				}
+				
+				if(isCritical == false) {
+					nonCriticalProcess.add(p);
+
+				for (int i = 0; i < processes.size(); i++) {	
+					ArrayList<Flow> srcTar = new ArrayList<>();
+					ArrayList<Process> outflowMatch = new ArrayList<>();
+					for (Flow outflow : p.getOutflows()) {
+							if(outflow.getTarget().get(0).getName().equals(processes.get(i).getName())) { //Target check and get flows between source and target, check if Process.get(i) is critical
+								srcTar.add(outflow);
+									// Outflow check for carrying assets
+									Iterator<Asset> iterator = outflow.getAssets().iterator();
+									while (iterator.hasNext()) {
+										for (Value val : iterator.next().getValue()) {
+											// Get first process and check surrounding assumptions that are assigned,
+											// if ass = true, check, if ass = false, Make an assumption
+											
+											if(!p.getAssumption().isEmpty()) {
+												Iterator<Assumption> assumptionIt = p.getAssumption().iterator();
+												while (assumptionIt.hasNext()) {
+													for (Objective obj : assumptionIt.next().getObjective()) { 
+														// Check assumption objective value == assets objective value, suggestion list
+														if(obj.getName().equals(val.getObjective().getName())) {
+															suggestionListObj.add(p); //Objectives Matched
+															outflowMatch.add(processes.get(i));
+														}
+														suggestionListAssumptionNot.add(p); // Objectives do not match
+													}
+												}
+											} else {
+											suggestionListPr.add(p);  // No assumption made
+											}
+													
+										}
+									}
+									}
+						 
+					
+					for (Flow inflows : p.getInflows()) {//check for priorities of flows that dont go to process
+						if(inflows.getSource().getName().equals(processes.get(i).getName())) { //Target check and get flows between source and target, check if Process.get(i) is critical
+							srcTar.add(inflows);
+								// Outflow check for carrying assets
+								Iterator<Asset> iterator = inflows.getAssets().iterator();
+								while (iterator.hasNext()) {
+									for (Value val : iterator.next().getValue()) {
+										// Get first process and check surrounding assumptions that are assigned,
+										// if ass = true, check, if ass = false, Make an assumption
+										
+										if(!p.getAssumption().isEmpty()) {
+											Iterator<Assumption> assumptionIt = p.getAssumption().iterator();
+											while (assumptionIt.hasNext()) {
+												for (Objective obj : assumptionIt.next().getObjective()) { 
+													// Check assumption objective value == assets objective value, suggestion list
+													if(obj.getName().equals(val.getObjective().getName())) {
+														suggestionListObj.add(p); //Objectives Matched
+														outflowMatch.add(processes.get(i));
+													}
+													suggestionListAssumptionNot.add(p); // Objectives do not match
+												}
+											}
+										} else {
+										suggestionListPr.add(p);  // No assumption made
+										}
+												
+									}
+								}
+								}
+					} 
+					}
+					boolean isNotSame = false;
+					for(int j = 1 ; j < srcTar.size(); j++) {
+						if(!srcTar.get(j).getChannel().getName().equals(srcTar.get(0).getChannel().getName())) { // not equal
+							isNotSame = true;
+						} 
+					}
+					if(isNotSame == false) {
+						for(Process pp : outflowMatch) {
+							ArrayList<Process> First = new ArrayList<>();
+							First.add(p);
+							First.add(pp);
+							pair.add(First);
+						}
+						suggestionListPrFlow.add(p);
+					} 
+				}
+			}// Compare A and B process If they are not critical, after target/source loops and both processes as pairs
+				
 			}
+		for(ArrayList<Process> l : pair) {
+			boolean First = false;
+			boolean Second = false;
+			for(int i = 0 ; i < nonCriticalProcess.size() ; i++) {
+				
+		if(l.get(0).equals(nonCriticalProcess.get(i))) {
+			First = true;
 		}
+		if(l.get(1).equals(nonCriticalProcess.get(i))) {
+			Second = true;
+		}
+		}
+		if(First == true && Second == true) {
+			if(!finalPair.contains(l)) {
+				finalPair.add(l);	
+			}
+		} 
+		}
+		
+//			for(ArrayList<Process> pr : finalPair) {
+//			System.out.println(pr.toString());
+//			}
 //--------------------------------------------------------------------------
 	}
 }

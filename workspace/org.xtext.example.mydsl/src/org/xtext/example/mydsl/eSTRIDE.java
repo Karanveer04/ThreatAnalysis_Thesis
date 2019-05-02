@@ -159,23 +159,16 @@ public class eSTRIDE {
 				if (!contents.getElements().get(i).getAssets().get(0).getValue().isEmpty()) { // check if values are not
 																								// empty for assets
 					for (int j = 0; j < contents.getElements().get(i).getAssets().size(); j++) {
+						
 						for (int k = 0; k < contents.getElements().get(i).getAssets().get(j).getValue().size(); k++) {
 							System.out.println(
-									"Assets Values: " + contents.getElements().get(i).getAssets().get(j).getValue());// get
-																														// k
+									"\n Element: " + contents.getElements().get(i).getName() +
+									"\n Assets Name: " + contents.getElements().get(i).getAssets().get(j).getName() +
+									"\n  Asset Objective: "+ contents.getElements().get(i).getAssets().get(j).getValue().get(k).getObjective() +
+									"\n  Asset Priority: "+ contents.getElements().get(i).getAssets().get(j).getValue().get(k).getPriority() );// get k
+																														
 						}
-//						System.out.println("Assets : " + contents.getElements().get(j).getAssets());
-
-//						for(int k = 0; k < contents.getElements().get(k).getAssets().get(k).getValue().size(); k++) {
-//							System.out.println("Assets Values: " + contents.getElements().get(k).getAssets().get(k).getValue());
-//						}
-
 					}
-//					System.out.println("Element Name: " + contents.getElements().get(i).getName()+
-//							"       Assets : "+ contents.getElements().get(i).getAssets().get(0).getName() + // need to loop , element might have more assets
-//							"       Value Objective: " + contents.getElements().get(i).getAssets().get(0).getValue().get(0).getObjective() + // need to loop, assets might have more values
-//							"       Value Priority: " + contents.getElements().get(i).getAssets().get(0).getValue().get(0).getPriority());
-//				}
 				}
 			}
 //		System.out.println();

@@ -53,7 +53,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="SourceToAsset" sourceMapping="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='DataStore'] //@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='ExternalEntity'] //@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Process']" targetMapping="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Asset']" targetFinderExpression="feature:assets">
+        <edgeMappings name="AssetToSource" sourceMapping="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Asset']" targetMapping="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='DataStore'] //@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='ExternalEntity'] //@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Process']" targetFinderExpression="feature:source">
           <style lineStyle="dash" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
@@ -93,6 +93,9 @@
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="eDFDFlowTracking::Flow" referenceName="outflows">
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="var:source"/>
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="target" valueExpression="var:target"/>
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:target">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="inflows" valueExpression="var:instance"/>
+                  </subModelOperations>
                 </subModelOperations>
                 <subModelOperations xsi:type="tool_1:SetValue" featureName="outflows" valueExpression="feature:outflows"/>
               </firstModelOperations>
@@ -144,18 +147,17 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="CreateSourceToAsset" edgeMappings="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='SourceToAsset']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="CreateAssetToSource" edgeMappings="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='AssetToSource']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
             <targetViewVariable name="targetView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="assets" valueExpression="var:target">
-                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:target">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="var:source"/>
-                  </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:target">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="assets" valueExpression="var:source"/>
                 </subModelOperations>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="var:target"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>

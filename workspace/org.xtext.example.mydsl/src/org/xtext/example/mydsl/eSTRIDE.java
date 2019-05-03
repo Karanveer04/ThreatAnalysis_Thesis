@@ -17,27 +17,23 @@ public class eSTRIDE {
 		eSTRIDEMap estride = new eSTRIDEMap();
 
 		File f = new File(
-				"C:\\Users\\Karan\\Git Projects\\Thesis\\ArchitecturalThreatAnalysis\\runtime\\xText\\src\\eDFD.mydsl");
+				"c:/Users/a296793/Desktop/nnw/ArchitecturalThreatAnalysis-eSTRIDE/runtime/xText/src/eDFD.mydsl");
 
 		Set<Flow> suggestionList = new HashSet<>();
+		HashMultimap<String, String> FlowBundlingTable = HashMultimap.create();
+		;
 
 //------Data Bundling Process---------------------------      
 		suggestionList = bundle.FlowBundle(f);
-
-		for (Flow temp : suggestionList) {
-			System.out.println("Flows that can be bundled: " + temp.getName());
-		}
-		System.out.println();
-
 //------eSTRIDE----------------------------------- 
 		HashMultimap<String, String> eSTRIDETable = estride.mapToeSTRIDE(f);
-
 //------Process Folding----------------------------------------------
 		ArrayList<ArrayList<Process>> finalPair = new ArrayList<ArrayList<Process>>();
 		finalPair = bundle.ProcessFold(f);
-
 //----PRINTING----
-//-------------------------Process Folding Suggestions------------------------------------------------		
+
+		// -------------------------Process Folding
+		// Suggestions------------------------------------------------
 		System.out.println(String.format("%25s %25s", "Process Folding Suggestions", "|"));
 		System.out.println(String.format("%s", "-----------------------------------------------------"));
 		for (int i = 0; i < finalPair.size(); i++) {
@@ -46,6 +42,27 @@ public class eSTRIDE {
 		}
 		System.out.println();
 		System.out.println();
+
+		// -------------------------Flow Bundling
+		// Suggestions------------------------------------------------
+		System.out.println("Bundling Table: ");
+		System.out.println(String.format("%25s %25s %70s %50s", "Entity", "|", "Flows", "|"));
+		System.out.println(String.format("%s",
+				"-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------"));
+		for (Flow flow : suggestionList) {
+			for (Flow matchFlow : suggestionList) {
+				if (flow.getSource().getName().equals(matchFlow.getSource().getName())) {
+					FlowBundlingTable.put(flow.getSource().getName(), flow.getName());
+					FlowBundlingTable.put(matchFlow.getSource().getName(), flow.getName());
+				}
+			}
+		}
+		for (String key : FlowBundlingTable.keySet()) {
+			System.out.println(String.format("%-25s %25s %-70s %50s", key, "|", FlowBundlingTable.get(key), "|"));
+		}
+		System.out.println("");
+		System.out.println("");
+
 //-------------------------------eSTRIDE Threat Table-------------------------------------------
 		System.out.println("eSTRIDE Threat Table: ");
 		System.out.println();

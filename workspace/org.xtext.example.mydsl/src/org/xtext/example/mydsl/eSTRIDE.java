@@ -16,26 +16,26 @@ public class eSTRIDE {
 		BundlingAndFolding bundle = new BundlingAndFolding();
 		eSTRIDEMap estride = new eSTRIDEMap();
 
-		File f = new File(
-				"c:/Users/a296793/Desktop/nnw/ArchitecturalThreatAnalysis-eSTRIDE/runtime/xText/src/eDFD.mydsl");
+		File inputModel = new File(
+				"C:\\Users\\Karan\\Git Projects\\Thesis\\ArchitecturalThreatAnalysis\\runtime\\xText\\src\\eDFD.mydsl");
 
 		Set<Flow> suggestionList = new HashSet<>();
 		HashMultimap<String, String> FlowBundlingTable = HashMultimap.create();
 		;
 
 //------Data Bundling Process---------------------------      
-		suggestionList = bundle.FlowBundle(f);
+		suggestionList = bundle.FlowBundle(inputModel);
 //------eSTRIDE----------------------------------- 
-		HashMultimap<String, String> eSTRIDETable = estride.mapToeSTRIDE(f);
+		HashMultimap<String, String> eSTRIDETable = estride.mapToeSTRIDE(inputModel);
 //------Process Folding----------------------------------------------
 		ArrayList<ArrayList<Process>> finalPair = new ArrayList<ArrayList<Process>>();
-		finalPair = bundle.ProcessFold(f);
+		finalPair = bundle.ProcessFold(inputModel);
 //----PRINTING----
 
 		// -------------------------Process Folding
 		// Suggestions------------------------------------------------
-		System.out.println(String.format("%25s %25s", "Process Folding Suggestions", "|"));
-		System.out.println(String.format("%s", "-----------------------------------------------------"));
+		System.out.println(String.format("%25s %23s", "Process Folding Suggestions", "|"));
+		System.out.println(String.format("%s", "---------------------------------------------------"));
 		for (int i = 0; i < finalPair.size(); i++) {
 			System.out.println(String.format("%-25s %25s", finalPair.get(i).get(i).getName(),
 					finalPair.get(i).get(i + 1).getName()));
@@ -45,7 +45,7 @@ public class eSTRIDE {
 
 		// -------------------------Flow Bundling
 		// Suggestions------------------------------------------------
-		System.out.println("Bundling Table: ");
+		System.out.println("Data Bundling Suggestions: ");
 		System.out.println(String.format("%25s %25s %70s %50s", "Entity", "|", "Flows", "|"));
 		System.out.println(String.format("%s",
 				"-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------"));

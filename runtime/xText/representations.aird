@@ -701,7 +701,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Asset']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_974CoGwnEemcooTJYa-ruw" target="TestAsset1" name="TestAsset1" semanticElements="TestAsset1" incomingEdges="_97534WwnEemcooTJYa-ruw" width="3" height="3" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_974CoGwnEemcooTJYa-ruw" name="TestAsset1" incomingEdges="_97534WwnEemcooTJYa-ruw" width="3" height="3" resizeKind="NSEW">
       <ownedBorderedNodes xmi:type="diagram:DNode" uid="_974ps2wnEemcooTJYa-ruw" name="name::Name" width="3" height="3" resizeKind="NSEW">
         <ownedStyle xmi:type="diagram:Lozenge" uid="_974ptGwnEemcooTJYa-ruw" labelSize="12" labelPosition="node" color="194,239,255">
           <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Asset']/@borderedNodeMappings[name='Value']/@style"/>
@@ -713,7 +713,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Asset']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_974Co2wnEemcooTJYa-ruw" target="TestAsset2" name="TestAsset2" semanticElements="TestAsset2" incomingEdges="_975362wnEemcooTJYa-ruw" width="3" height="3" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_974Co2wnEemcooTJYa-ruw" name="TestAsset2" incomingEdges="_975362wnEemcooTJYa-ruw" width="3" height="3" resizeKind="NSEW">
       <ownedBorderedNodes xmi:type="diagram:DNode" uid="_974ptmwnEemcooTJYa-ruw" name="name::Name" width="3" height="3" resizeKind="NSEW">
         <ownedStyle xmi:type="diagram:Lozenge" uid="_974pt2wnEemcooTJYa-ruw" labelSize="12" labelPosition="node" color="194,239,255">
           <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Asset']/@borderedNodeMappings[name='Value']/@style"/>
@@ -734,7 +734,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_975QwGwnEemcooTJYa-ruw" target="testFlow1" name="WiFi" semanticElements="testFlow1" sourceNode="_9720hmwnEemcooTJYa-ruw" targetNode="_9720iWwnEemcooTJYa-ruw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_975QwGwnEemcooTJYa-ruw" name="WiFi" sourceNode="_9720hmwnEemcooTJYa-ruw" targetNode="_9720iWwnEemcooTJYa-ruw">
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_975QwWwnEemcooTJYa-ruw" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_975QwmwnEemcooTJYa-ruw" labelSize="12"/>
@@ -795,7 +795,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_975Q42wnEemcooTJYa-ruw" target="TestFlow4" name="WiFi" semanticElements="TestFlow4" sourceNode="_973bk2wnEemcooTJYa-ruw" targetNode="_9720g2wnEemcooTJYa-ruw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_975Q42wnEemcooTJYa-ruw" name="WiFi" sourceNode="_973bk2wnEemcooTJYa-ruw" targetNode="_9720g2wnEemcooTJYa-ruw">
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_975Q5GwnEemcooTJYa-ruw" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_975Q5WwnEemcooTJYa-ruw" labelSize="12"/>
@@ -820,14 +820,14 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_975Q8mwnEemcooTJYa-ruw" target="TestFlow2" name="WiFi" semanticElements="TestFlow2" sourceNode="_973blmwnEemcooTJYa-ruw" targetNode="_9720hmwnEemcooTJYa-ruw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_975Q8mwnEemcooTJYa-ruw" name="WiFi" sourceNode="_973blmwnEemcooTJYa-ruw" targetNode="_9720hmwnEemcooTJYa-ruw">
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_975Q82wnEemcooTJYa-ruw" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_975Q9GwnEemcooTJYa-ruw" labelSize="12"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_975Q92wnEemcooTJYa-ruw" target="TestFlow3" name="WiFi" semanticElements="TestFlow3" sourceNode="_973blmwnEemcooTJYa-ruw" targetNode="_973bkGwnEemcooTJYa-ruw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_975Q92wnEemcooTJYa-ruw" name="WiFi" sourceNode="_973blmwnEemcooTJYa-ruw" targetNode="_973bkGwnEemcooTJYa-ruw">
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_975Q-GwnEemcooTJYa-ruw" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_975Q-WwnEemcooTJYa-ruw" labelSize="12"/>
@@ -1860,8 +1860,8 @@
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_oR_UuGzhEemJvtd2z5AlLw" name="WiFi" sourceNode="_C9OA4Gy9EemJvtd2z5AlLw" targetNode="_C9On92y9EemJvtd2z5AlLw">
-      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#test1"/>
-      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#test1"/>
+      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#test"/>
+      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#test"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_oR_7oGzhEemJvtd2z5AlLw" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_oR_7oWzhEemJvtd2z5AlLw" labelSize="12"/>
@@ -1905,8 +1905,8 @@
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_pWea-GziEemJvtd2z5AlLw" name="WiFi" sourceNode="_C9On-my9EemJvtd2z5AlLw" targetNode="_C9OoAGy9EemJvtd2z5AlLw">
-      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#radiogaga"/>
-      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#radiogaga"/>
+      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#shouldBundleWithSeven"/>
+      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#shouldBundleWithSeven"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_pWea-WziEemJvtd2z5AlLw" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_pWea-mziEemJvtd2z5AlLw" labelSize="12"/>
@@ -1914,8 +1914,8 @@
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_rVhh0GziEemJvtd2z5AlLw" name="WiFi" sourceNode="_C9On-my9EemJvtd2z5AlLw" targetNode="_C9OoAGy9EemJvtd2z5AlLw">
-      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#radiogugu"/>
-      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#radiogugu"/>
+      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#radio"/>
+      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#radio"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_rVhh0WziEemJvtd2z5AlLw" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_rVhh0mziEemJvtd2z5AlLw" labelSize="12"/>
@@ -1932,8 +1932,8 @@
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_vlrveGziEemJvtd2z5AlLw" name="WiFi" sourceNode="_C9OoAGy9EemJvtd2z5AlLw" targetNode="_C9On-my9EemJvtd2z5AlLw">
-      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#freddie"/>
-      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#freddie"/>
+      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#toCitizenClient"/>
+      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#toCitizenClient"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_vlrveWziEemJvtd2z5AlLw" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_vlrvemziEemJvtd2z5AlLw" labelSize="12"/>
@@ -3427,8 +3427,8 @@
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_3o-QU2ziEemJvtd2z5AlLw" name="WiFi" sourceNode="_3o5XvGziEemJvtd2z5AlLw" targetNode="_3o5-xGziEemJvtd2z5AlLw">
-      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#radiogaga"/>
-      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#radiogaga"/>
+      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#shouldBundleWithSeven"/>
+      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#shouldBundleWithSeven"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_3o-QVGziEemJvtd2z5AlLw" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_3o-QVWziEemJvtd2z5AlLw" labelSize="12"/>
@@ -3436,8 +3436,8 @@
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_3o-3QmziEemJvtd2z5AlLw" name="WiFi" sourceNode="_3o5XvGziEemJvtd2z5AlLw" targetNode="_3o5-xGziEemJvtd2z5AlLw">
-      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#radiogugu"/>
-      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#radiogugu"/>
+      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#radio"/>
+      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#radio"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_3o-3Q2ziEemJvtd2z5AlLw" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_3o-3RGziEemJvtd2z5AlLw" labelSize="12"/>
@@ -3463,8 +3463,8 @@
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_3o-3UWziEemJvtd2z5AlLw" name="WiFi" sourceNode="_3o5XsGziEemJvtd2z5AlLw" targetNode="_3o5XuWziEemJvtd2z5AlLw">
-      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#test1"/>
-      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#test1"/>
+      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#test"/>
+      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#test"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_3o-3UmziEemJvtd2z5AlLw" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_3o-3U2ziEemJvtd2z5AlLw" labelSize="12"/>
@@ -3517,8 +3517,8 @@
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_3o-3b2ziEemJvtd2z5AlLw" name="WiFi" sourceNode="_3o5-xGziEemJvtd2z5AlLw" targetNode="_3o5XvGziEemJvtd2z5AlLw">
-      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#freddie"/>
-      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#freddie"/>
+      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#toCitizenClient"/>
+      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#toCitizenClient"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_3o-3cGziEemJvtd2z5AlLw" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_3o-3cWziEemJvtd2z5AlLw" labelSize="12"/>
@@ -3615,8 +3615,8 @@
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='AssetToSource']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_jnAPbGzlEemJvtd2z5AlLw" name="WiFi" sourceNode="_hdQ7oGzlEemJvtd2z5AlLw" targetNode="_3o5-wWziEemJvtd2z5AlLw">
-      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#kaya"/>
-      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#kaya"/>
+      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#dataflow"/>
+      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#dataflow"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_jnAPbWzlEemJvtd2z5AlLw" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_jnAPbmzlEemJvtd2z5AlLw" labelSize="12"/>
@@ -3684,8 +3684,8 @@
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_S3H8amzmEemJvtd2z5AlLw" name="WiFi" sourceNode="_RyoZUGzmEemJvtd2z5AlLw" targetNode="_3o5-wWziEemJvtd2z5AlLw">
-      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#flowing"/>
-      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#flowing"/>
+      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#flowingNoBundling"/>
+      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#flowingNoBundling"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_S3H8a2zmEemJvtd2z5AlLw" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_S3H8bGzmEemJvtd2z5AlLw" labelSize="12"/>
@@ -3693,8 +3693,8 @@
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_T1gQKGzmEemJvtd2z5AlLw" name="VLAN" sourceNode="_3o5-wWziEemJvtd2z5AlLw" targetNode="_RyoZUGzmEemJvtd2z5AlLw">
-      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#stillflowing"/>
-      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#stillflowing"/>
+      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#noBundling"/>
+      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#noBundling"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_T1gQKWzmEemJvtd2z5AlLw" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_T1gQKmzmEemJvtd2z5AlLw" labelSize="12"/>

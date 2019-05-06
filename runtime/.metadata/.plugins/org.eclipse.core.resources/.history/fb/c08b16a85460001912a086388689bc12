@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description" uid="_dUVR0FuWEemqv_MFa6DVwA" selectedViews="_TPqyIFuaEemwXp_qBHPuBQ" version="14.1.0.201810161215">
+  <referencedAnalysis xmi:type="viewpoint:DAnalysis" href="newDiagrams.aird#_A7-fgGBUEemNV6EHhjUV7w"/>
+  <semanticResources>My.edfdflowtracking</semanticResources>
+  <ownedViews xmi:type="viewpoint:DView" uid="_CDUiQFuXEemqv_MFa6DVwA">
+    <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/my.project.design2/description/design2.odesign#//@ownedViewpoints[name='MyViewpoint']"/>
+  </ownedViews>
+  <ownedViews xmi:type="viewpoint:DView" uid="_TPqyIFuaEemwXp_qBHPuBQ">
+    <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='OMG']"/>
+  </ownedViews>
+</viewpoint:DAnalysis>

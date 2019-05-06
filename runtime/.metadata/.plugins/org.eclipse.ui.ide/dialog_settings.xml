@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\Karan\Git Projects\Katjaa\flaws-in-flows\info-flow-eDFD-DSL-VIATRA\runtime\test_VIATRA\FriendMap"/>
+		<item value="C:\Users\Karan\Git Projects\Katjaa\flaws-in-flows\info-flow-eDFD-DSL-VIATRA\runtime\test_VIATRA"/>
+		<item value="E:\test\fr.obeo.dsl.relation.design"/>
+		<item value="C:\Users\Karan\Git Projects\Thesis\ArchitecturalThreatAnalysis\runtime"/>
+	</list>
+</section>

@@ -1,15 +1,3 @@
-<<<<<<< HEAD
 /.metadata/
-workspace/Meta/bin/.gitignore
-workspace/Meta.tests/bin/.gitignore
-workspace/Meta.editor/bin/.gitignore
-workspace/Meta.edit/bin/.gitignore
-=======
 ArchitecturalThreatAnalysis/runtime/.metadata/
-ArchitecturalThreatAnalysis/workspace/eDFDFlowTracking1/bin/.gitignore
-ArchitecturalThreatAnalysis/workspace/eDFDFlowTracking1.edit/.gitignore
-ArchitecturalThreatAnalysis/workspace/eDFDFlowTracking1.editor/.gitignore
-ArchitecturalThreatAnalysis/workspace/eDFDFlowTracking1.tests/.gitignore
-ArchitecturalThreatAnalysis/workspace/org.xtext.example.mydsl.ui.tests/.gitignore
 
->>>>>>> eSTRIDE

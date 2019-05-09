@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="project" version="12.0.0.2017041100">
-  <ownedViewpoints name="OMG">
+  <ownedViewpoints name="eDFD">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="extendedDFD" domainClass="eDFDFlowTracking::EDFD" enablePopupBars="true">
       <metamodel href="http://www.example.org/eDFDFlowTracking#/"/>
       <defaultLayer name="eDFDiagram">
@@ -45,7 +45,7 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
           </style>
         </nodeMappings>
-        <edgeMappings name="Flow" sourceMapping="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='ExternalEntity'] //@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Process'] //@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='DataStore']" targetMapping="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='ExternalEntity'] //@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Process'] //@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='DataStore']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="eDFDFlowTracking::Flow" useDomainElement="true">
+        <edgeMappings name="Flow" sourceMapping="//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='ExternalEntity'] //@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Process'] //@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='DataStore']" targetMapping="//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='ExternalEntity'] //@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Process'] //@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='DataStore']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="eDFDFlowTracking::Flow" useDomainElement="true">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12" labelExpression="feature:Channel">
@@ -53,7 +53,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="AssetToSource" sourceMapping="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Asset']" targetMapping="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='DataStore'] //@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='ExternalEntity'] //@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Process']" targetFinderExpression="feature:source">
+        <edgeMappings name="AssetToSource" sourceMapping="//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Asset']" targetMapping="//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='DataStore'] //@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='ExternalEntity'] //@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Process']" targetFinderExpression="feature:source">
           <style lineStyle="dash" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
@@ -61,7 +61,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="SourceToAssumption" sourceMapping="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Process'] //@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='DataStore'] //@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='ExternalEntity']" targetMapping="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Assumption']" targetFinderExpression="feature:assumption">
+        <edgeMappings name="SourceToAssumption" sourceMapping="//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Process'] //@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='DataStore'] //@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='ExternalEntity']" targetMapping="//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Assumption']" targetFinderExpression="feature:assumption">
           <style lineStyle="dot" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
@@ -70,7 +70,7 @@
           </style>
         </edgeMappings>
         <toolSections name="tools">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="createAsset" nodeMappings="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Asset']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createAsset" nodeMappings="//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Asset']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -83,7 +83,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="createDataFlow" edgeMappings="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="createDataFlow" edgeMappings="//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -101,7 +101,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="createProcess" nodeMappings="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Process']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createProcess" nodeMappings="//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Process']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -112,7 +112,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="createDataStore" nodeMappings="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='DataStore']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createDataStore" nodeMappings="//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='DataStore']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -123,7 +123,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="createExternalEntity" nodeMappings="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='ExternalEntity']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createExternalEntity" nodeMappings="//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='ExternalEntity']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -134,7 +134,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="createAssumption" nodeMappings="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Assumption']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createAssumption" nodeMappings="//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Assumption']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -147,7 +147,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="CreateAssetToSource" edgeMappings="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='AssetToSource']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="CreateAssetToSource" edgeMappings="//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='AssetToSource']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -171,7 +171,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="createAssetValue" nodeMappings="//@ownedViewpoints[name='OMG']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Asset']/@borderedNodeMappings[name='Value']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createAssetValue" nodeMappings="//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Asset']/@borderedNodeMappings[name='Value']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>

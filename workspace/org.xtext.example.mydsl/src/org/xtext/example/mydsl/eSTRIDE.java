@@ -3,7 +3,9 @@ package org.xtext.example.mydsl;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
@@ -18,7 +20,9 @@ public class eSTRIDE {
 		BundlingAndFolding bundle = new BundlingAndFolding();
 		eSTRIDEMap estride = new eSTRIDEMap();
 		Scanner choice = new Scanner(System.in);
-		PrintWriter writer = new PrintWriter("results.txt", "UTF-8");		
+		Date now = new java.util.Date();
+		Timestamp current = new java.sql.Timestamp(now.getTime());
+		PrintWriter writer = new PrintWriter("results" + current.getNanos() +  ".txt", "UTF-8");		
 		
 		System.out.println("Input path to the .mydsl file, including the file name + extension name");
 		String path = choice.next();

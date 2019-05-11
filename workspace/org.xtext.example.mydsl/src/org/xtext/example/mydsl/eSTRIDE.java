@@ -2,6 +2,7 @@ package org.xtext.example.mydsl;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Scanner;
@@ -17,6 +18,7 @@ public class eSTRIDE {
 		BundlingAndFolding bundle = new BundlingAndFolding();
 		eSTRIDEMap estride = new eSTRIDEMap();
 		Scanner choice = new Scanner(System.in);
+		PrintWriter writer = new PrintWriter("results.txt", "UTF-8");		
 		
 		System.out.println("Input path to the .mydsl file, including the file name + extension name");
 		String path = choice.next();
@@ -40,12 +42,18 @@ public class eSTRIDE {
 				// Suggestions------------------------------------------------
 				System.out.println(String.format("%25s %23s", "Process Folding Suggestions", "|"));
 				System.out.println(String.format("%s", "---------------------------------------------------"));
+				writer.println(String.format("%25s %23s", "Process Folding Suggestions", "|"));
+				writer.println(String.format("%s", "---------------------------------------------------"));
 				for (int i = 0; i < finalPair.size(); i++) {
 					System.out.println(String.format("%-25s %25s", finalPair.get(i).get(i).getName(),
 							finalPair.get(i).get(i + 1).getName()));
+					writer.println(String.format("%-25s %25s", finalPair.get(i).get(i).getName(),
+							finalPair.get(i).get(i + 1).getName()));
 				}
 				System.out.println();
+				writer.println();
 				System.out.println();
+				writer.println();
 
 				// -------------------------Flow Bundling
 				// Suggestions------------------------------------------------
@@ -53,6 +61,11 @@ public class eSTRIDE {
 				System.out.println(String.format("%25s %25s %70s %50s", "Entity", "|", "Flows", "|"));
 				System.out.println(String.format("%s",
 						"-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------"));
+				writer.println("Data Bundling Suggestions: ");
+				writer.println(String.format("%25s %25s %70s %50s", "Entity", "|", "Flows", "|"));
+				writer.println(String.format("%s",
+						"-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------"));
+
 				for (Flow flow : suggestionList) {
 					for (Flow matchFlow : suggestionList) {
 						if (flow.getSource().getName().equals(matchFlow.getSource().getName())) {
@@ -64,9 +77,12 @@ public class eSTRIDE {
 				for (String key : FlowBundlingTable.keySet()) {
 					System.out
 							.println(String.format("%-25s %25s %-70s %50s", key, "|", FlowBundlingTable.get(key), "|"));
+					writer.println(String.format("%-25s %25s %-70s %50s", key, "|", FlowBundlingTable.get(key), "|"));
 				}
 				System.out.println("");
+				writer.println("");
 				System.out.println("");
+				writer.println("");
 			} else if (n == 1) {
 //-------------------------------eSTRIDE Threat Table-------------------------------------------
 				System.out.println("eSTRIDE Threat Table: ");
@@ -74,14 +90,21 @@ public class eSTRIDE {
 				System.out.println(String.format("%25s %25s %70s %50s", "Entity", "|", "STRIDE Category", "|"));
 				System.out.println(String.format("%s",
 						"-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------"));
+				writer.println("eSTRIDE Threat Table: ");
+				writer.println();
+				writer.println(String.format("%25s %25s %70s %50s", "Entity", "|", "STRIDE Category", "|"));
+				writer.println(String.format("%s",
+						"-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------"));
 
 				for (String key : eSTRIDETable.keySet()) {
 					System.out.println(String.format("%-25s %25s %-70s %50s", key, "|", eSTRIDETable.get(key), "|"));
+					writer.println(String.format("%-25s %25s %-70s %50s", key, "|", eSTRIDETable.get(key), "|"));
 				}
 			} else {
 				break;
 			}
 		}
+		writer.close();
 		choice.close();
 	}
 }

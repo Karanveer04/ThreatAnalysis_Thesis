@@ -1,8 +1,10 @@
 package org.xtext.example.mydsl;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Date;
@@ -49,10 +51,10 @@ public class eSTRIDE {
 				writer.println(String.format("%25s %23s", "Process Folding Suggestions", "|"));
 				writer.println(String.format("%s", "---------------------------------------------------"));
 				for (int i = 0; i < finalPair.size(); i++) {
-					System.out.println(String.format("%-25s %25s", finalPair.get(i).get(i).getName(),
-							finalPair.get(i).get(i + 1).getName()));
-					writer.println(String.format("%-25s %25s", finalPair.get(i).get(i).getName(),
-							finalPair.get(i).get(i + 1).getName()));
+					System.out.println(String.format("%-25s %25s", finalPair.get(i).get(0).getName(),
+							finalPair.get(i).get(1).getName()));
+					writer.println(String.format("%-25s %25s", finalPair.get(i).get(0).getName(),
+							finalPair.get(i).get(1).getName()));
 				}
 				System.out.println();
 				writer.println();
@@ -111,4 +113,5 @@ public class eSTRIDE {
 		writer.close();
 		choice.close();
 	}
+
 }

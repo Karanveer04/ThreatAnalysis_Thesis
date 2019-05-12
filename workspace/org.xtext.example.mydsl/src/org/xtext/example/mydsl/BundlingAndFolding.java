@@ -74,24 +74,9 @@ public class BundlingAndFolding {
 		ArrayList<ArrayList<Process>> pair = new ArrayList<ArrayList<Process>>();
 		ArrayList<ArrayList<Process>> finalPair = new ArrayList<ArrayList<Process>>();
 
-		for (Process p : processes) { // Get Inflows too
-			boolean isCritical = false;
-			if (!p.getAssets().isEmpty()) {
-				for (Asset as : p.getAssets()) {// we should actually check the inflows and outflows as well , unless
-												// our model adds all assets to a Process
-					for (Value v : as.getValue()) {
-						if (v.getPriority().getName().equals("H")) {
-//					System.out.println("NO Folding possible : " + p.getName());
-							isCritical = true;
-						}
-					}
-				}
-			}
-
-			if (isCritical == false) {
-				nonCriticalProcess.add(p);
-
+		for (Process p : processes) { 
 				for (int i = 0; i < processes.size(); i++) {
+					boolean isCritical = false;
 					ArrayList<Flow> srcTar = new ArrayList<>();
 					ArrayList<Process> flowsMatch = new ArrayList<>();
 					for (Flow outflow : p.getOutflows()) {
@@ -100,9 +85,20 @@ public class BundlingAndFolding {
 																										// between
 																										// source and
 																										// target, check
-																										// if
-																										// Process.get(i)
-																										// is critical
+																										// if flows between processes
+																										// are critical
+							
+							if (!outflow.getAssets().isEmpty()) {
+								for (Asset as : outflow.getAssets()) {
+									for (Value v : as.getValue()) {
+										if (v.getPriority().getName().equals("H")) {
+//									System.out.println("NO Folding possible : " + p.getName());
+											isCritical = true;
+										}
+									}
+								}
+							}
+							
 							srcTar.add(outflow);
 							// Outflow check for carrying assets
 							Iterator<Asset> iterator = outflow.getAssets().iterator();
@@ -137,8 +133,20 @@ public class BundlingAndFolding {
 																									// get flows between
 																									// source and
 																									// target, check if
-																									// Process.get(i) is
+																									// flows between processes
 																									// critical
+								
+								if (!inflows.getAssets().isEmpty()) {
+									for (Asset as : inflows.getAssets()) {
+										for (Value v : as.getValue()) {
+											if (v.getPriority().getName().equals("H")) {
+//										System.out.println("NO Folding possible : " + p.getName());
+												isCritical = true;
+											}
+										}
+									}
+								}
+								
 								srcTar.add(inflows);
 								// Outflow check for carrying assets
 								Iterator<Asset> iterator = inflows.getAssets().iterator();
@@ -168,45 +176,55 @@ public class BundlingAndFolding {
 									}
 								}
 							}
-						}
+						}	
 					}
-					boolean isNotSame = false;
-					for (int j = 1; j < srcTar.size(); j++) {
-						if (!srcTar.get(j).getChannel().getName().equals(srcTar.get(0).getChannel().getName())) { // not
-																													// equal
-							isNotSame = true;
-						}
-					}
-					if (isNotSame == false) {
+					
+					if(!isCritical) { // Compare A and B process that had an assumption If they are not critical, after target/source loops
 						for (Process process : flowsMatch) {
 							ArrayList<Process> First = new ArrayList<>();
 							First.add(p);
 							First.add(process);
-							pair.add(First);
+							pair.add(First); // and add both processes as pairs
 						}
 					}
+					
+//					boolean isNotSame = false;   //check if they have the same channels
+//					for (int j = 1; j < srcTar.size(); j++) {
+//						if (!srcTar.get(j).getChannel().getName().equals(srcTar.get(0).getChannel().getName())) { // not
+//																													// equal
+//							isNotSame = true;
+//						}
+//					}
+//					if (isNotSame == false) {
+//						for (Process process : flowsMatch) {
+//							ArrayList<Process> First = new ArrayList<>();
+//							First.add(p);
+//							First.add(process);
+//							pair.add(First);
+//						}
+//					}
 				}
 			} // Compare A and B process If they are not critical, after target/source loops
 				// and both processes as pairs
 
-		}
+//		}
 		for (ArrayList<Process> l : pair) {
-			boolean First = false;
-			boolean Second = false;
-			for (int i = 0; i < nonCriticalProcess.size(); i++) {
-
-				if (l.get(0).equals(nonCriticalProcess.get(i))) {
-					First = true;
-				}
-				if (l.get(1).equals(nonCriticalProcess.get(i))) {
-					Second = true;
-				}
-			}
-			if (First == true && Second == true) {
+//			boolean First = false;
+//			boolean Second = false;
+//			for (int i = 0; i < nonCriticalProcess.size(); i++) {
+//
+//				if (l.get(0).equals(nonCriticalProcess.get(i))) {
+//					First = true;
+//				}
+//				if (l.get(1).equals(nonCriticalProcess.get(i))) {
+//					Second = true;
+//				}
+//			}
+//			if (First == true && Second == true) {
 				if (!finalPair.contains(l)) {
 					finalPair.add(l);
 				}
-			}
+//			}
 		}
 		return finalPair;
 	}

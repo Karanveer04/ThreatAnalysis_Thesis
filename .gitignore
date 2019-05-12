@@ -1,3 +1,12 @@
+<<<<<<< HEAD
 /.metadata/
 ArchitecturalThreatAnalysis/runtime/.metadata/
+=======
+/runtime/.metadata/
+/workspace/eDFDFlowTracking1/bin/.gitignore
+/workspace/eDFDFlowTracking1.edit/.gitignore
+/workspace/eDFDFlowTracking1.editor/.gitignore
+/workspace/eDFDFlowTracking1.tests/.gitignore
+/workspace/org.xtext.example.mydsl.ui.tests/.gitignore
+>>>>>>> eSTRIDE
 

@@ -1,19 +1,43 @@
 EDFD HomeSystem[
 	
 elements: 
-ExternalEntity Mote [ incoming flows: "Handle Sensor Data and Motes.Actuator Command" outgoing flows: "Sensor Data 1" [ source: Mote targets: "Handle Sensor Data and Motes" ] ] , 
-Process "Handle Sensor Data and Motes" [ incoming flows: "Mote.Sensor Data 1" , "Manage Notifications, Events and Rules.Actuate" outgoing flows: "Actuator Command" [ source: "Handle Sensor Data and Motes" targets: Mote ] , "Sensor Data 2" [ source: "Handle Sensor Data and Motes" targets: "Manage Notifications, Events and Rules" ] , "Sensor Data" [ source: "Handle Sensor Data and Motes" targets: "DB Monitor to Storage" ] ] , 
-Process "Manage Notifications, Events and Rules" [ incoming flows: "Handle Sensor Data and Motes.Sensor Data 2" , "Rules Storage.Rules 1" , "Manage Rules, View Sensor Data .Rules 4" outgoing flows: Actuate [ source: "Manage Notifications, Events and Rules" targets: "Handle Sensor Data and Motes" ] , "Rules 2" [ source: "Manage Notifications, Events and Rules" targets: "Rules Storage" ] , Events [ source: "Manage Notifications, Events and Rules" targets: "DB Monitor to Storage" ] , "Notifications, Sensor Data and Events" [ source: "Manage Notifications, Events and Rules" targets: "Customer DB" ] , "Rules 3" [ source: "Manage Notifications, Events and Rules" targets: "Manage Rules, View Sensor Data " ] ] , 
-DataStore "Rules Storage" [ incoming flows: "Manage Notifications, Events and Rules.Rules 2" outgoing flows: "Rules 1" [ source: "Rules Storage" targets: "Manage Notifications, Events and Rules" ] ] , 
-Process "DB Monitor to Storage" [ incoming flows: "Manage Notifications, Events and Rules.Events" , "Handle Sensor Data and Motes.Sensor Data" outgoing flows: "Monitor Data 1" [ source: "DB Monitor to Storage" targets: "Primary Sensor Storage" ] , "Monitor Data 2" [ source: "DB Monitor to Storage" targets: "Secondary Sensor Storage" ] , "Sensor Data and Events 1" [ source: "DB Monitor to Storage" ] , "Sensor Data and Events" [ source: "DB Monitor to Storage" targets: "View Sensors Data, Logs, Customers" ] , "Sensor Data and Events 3" [ source: "DB Monitor to Storage" ] ] , 
-DataStore "Primary Sensor Storage" [ incoming flows: "DB Monitor to Storage.Monitor Data 1" outgoing flows: "All Data 1" [ source: "Primary Sensor Storage" targets: Copy ] ] , 
+ExternalEntity Mote [ incoming flows: "Handle Sensor Data and Motes.Actuator Command" 
+	outgoing flows: "Sensor Data 1" [ source: Mote targets: "Handle Sensor Data and Motes" ]
+] , 
+Process "Handle Sensor Data and Motes" [ incoming flows: "Mote.Sensor Data 1" , "Manage Notifications, Events and Rules.Actuate" 
+	outgoing flows: "Actuator Command" [ source: "Handle Sensor Data and Motes" targets: Mote ] , "Sensor Data 2" [ source: "Handle Sensor Data and Motes" targets: "Manage Notifications, Events and Rules" ] , "Sensor Data" [ source: "Handle Sensor Data and Motes" targets: "DB Monitor to Storage" ]
+] , 
+Process "Manage Notifications, Events and Rules" [ incoming flows: "Handle Sensor Data and Motes.Sensor Data 2" , "Rules Storage.Rules 1" , "Manage Rules, View Sensor Data .Rules 4" 
+	outgoing flows: Actuate [ source: "Manage Notifications, Events and Rules" targets: "Handle Sensor Data and Motes" ] , "Rules 2" [ source: "Manage Notifications, Events and Rules" targets: "Rules Storage" ] , Events [ source: "Manage Notifications, Events and Rules" targets: "DB Monitor to Storage" ] , "Notifications, Sensor Data and Events" [ source: "Manage Notifications, Events and Rules" targets: "Customer DB" ] , "Rules 3" [ source: "Manage Notifications, Events and Rules" targets: "Manage Rules, View Sensor Data " ]
+] , 
+DataStore "Rules Storage" [ incoming flows: "Manage Notifications, Events and Rules.Rules 2" 
+	outgoing flows: "Rules 1" [ source: "Rules Storage" targets: "Manage Notifications, Events and Rules" ]
+] , 
+Process "DB Monitor to Storage" [ incoming flows: "Manage Notifications, Events and Rules.Events" , "Handle Sensor Data and Motes.Sensor Data" 
+	outgoing flows: "Monitor Data 1" [ source: "DB Monitor to Storage" targets: "Primary Sensor Storage" ] , "Monitor Data 2" [ source: "DB Monitor to Storage" targets: "Secondary Sensor Storage" ] , "Sensor Data and Events" [ source: "DB Monitor to Storage" targets: "View Sensors Data, Logs, Customers" ]
+] , 
+DataStore "Primary Sensor Storage" [ incoming flows: "DB Monitor to Storage.Monitor Data 1"
+	outgoing flows: "All Data 1" [ source: "Primary Sensor Storage" targets: Copy ]
+] , 
 DataStore "Secondary Sensor Storage" [ incoming flows: "Copy.All Data 2" , "DB Monitor to Storage.Monitor Data 2" ] , 
-Process Copy [ incoming flows: "Primary Sensor Storage.All Data 1" outgoing flows: "All Data 2" [ source: Copy targets: "Secondary Sensor Storage" ] ] , 
-DataStore "Operator DB " [ incoming flows: "View Sensors Data, Logs, Customers.Record Actions 2" outgoing flows: "Record Actions 1" [ source: "Operator DB " targets: "View Sensors Data, Logs, Customers" ] , "Record Actions 6" [ source: "Operator DB " ] , "Credentials 1" [ source: "Operator DB " targets: "Authentication and Token" ] ] , 
- Process "View Sensors Data, Logs, Customers" [ incoming flows: "Operator DB .Record Actions 1" , "Operation Client.Requests 1" , "DB Monitor to Storage.Sensor Data and Events" outgoing flows: "Record Actions 2" [ source: "View Sensors Data, Logs, Customers" targets: "Operator DB " ] , "Token 1" [ source: "View Sensors Data, Logs, Customers" targets: "Authentication and Token" ] ] , 
- ExternalEntity "Operation Client" [ incoming flows: "Authentication and Token.Credentials and Token 3" outgoing flows: "Requests 1" [ source: "Operation Client" targets: "View Sensors Data, Logs, Customers" ] , "Requests 3" [ source: "Operation Client" ] , "Credentials and Token 2" [ source: "Operation Client" targets: "Authentication and Token" ] ] , 
-Process "Authentication and Token" [ incoming flows: "Operator DB .Credentials 1" , "Operation Client.Credentials and Token 2" , "Customer DB.Credentials 2" , "View Sensors Data, Logs, Customers.Token 1" , "Customer Client.Credentials and Token" , "Manage Rules, View Sensor Data .Token 2" outgoing flows: "Credentials and Token 3" [ source: "Authentication and Token" targets: "Operation Client" ] , "Credentials and Token 1" [ source: "Authentication and Token" targets: "Customer Client" ] ] , 
-Process "Manage Rules, View Sensor Data " [ incoming flows: "Customer Client.Requests" , "Customer DB.Sensor Data 3" , "Manage Notifications, Events and Rules.Rules 3" outgoing flows: "Token 2" [ source: "Manage Rules, View Sensor Data " targets: "Authentication and Token" ] , "Rules, Registration Information" [ source: "Manage Rules, View Sensor Data " targets: "Customer DB" ] , "Rules 4" [ source: "Manage Rules, View Sensor Data " targets: "Manage Notifications, Events and Rules" ] ] , 
+Process Copy [ incoming flows: "Primary Sensor Storage.All Data 1" 
+	outgoing flows: "All Data 2" [ source: Copy targets: "Secondary Sensor Storage" ]
+] , 
+DataStore "Operator DB " [ incoming flows: "View Sensors Data, Logs, Customers.Record Actions 2" 
+	outgoing flows: "Record Actions 1" [ source: "Operator DB " targets: "View Sensors Data, Logs, Customers" ] , "Record Actions 6" [ source: "Operator DB " ] , "Credentials 1" [ source: "Operator DB " targets: "Authentication and Token" ]
+] , 
+ Process "View Sensors Data, Logs, Customers" [ incoming flows: "Operator DB .Record Actions 1" , "Operation Client.Requests 1" , "DB Monitor to Storage.Sensor Data and Events" 
+ 	outgoing flows: "Record Actions 2" [ source: "View Sensors Data, Logs, Customers" targets: "Operator DB " ] , "Token 1" [ source: "View Sensors Data, Logs, Customers" targets: "Authentication and Token" ]
+ ] , 
+ ExternalEntity "Operation Client" [ incoming flows: "Authentication and Token.Credentials and Token 3" 
+ 	outgoing flows: "Requests 1" [ source: "Operation Client" targets: "View Sensors Data, Logs, Customers" ]  , "Credentials and Token 2" [ source: "Operation Client" targets: "Authentication and Token" ]
+ ] , 
+Process "Authentication and Token" [ incoming flows: "Operator DB .Credentials 1" , "Operation Client.Credentials and Token 2" , "Customer DB.Credentials 2" , "View Sensors Data, Logs, Customers.Token 1" , "Customer Client.Credentials and Token" , "Manage Rules, View Sensor Data .Token 2" 
+	outgoing flows: "Credentials and Token 3" [ source: "Authentication and Token" targets: "Operation Client" ] , "Credentials and Token 1" [ source: "Authentication and Token" targets: "Customer Client" ]
+] , 
+Process "Manage Rules, View Sensor Data " [ incoming flows: "Customer Client.Requests" , "Customer DB.Sensor Data 3" , "Manage Notifications, Events and Rules.Rules 3"
+	outgoing flows: "Token 2" [ source: "Manage Rules, View Sensor Data " targets: "Authentication and Token" ] , "Rules, Registration Information" [ source: "Manage Rules, View Sensor Data " targets: "Customer DB" ] , "Rules 4" [ source: "Manage Rules, View Sensor Data " targets: "Manage Notifications, Events and Rules" ]
+] , 
 DataStore "Customer DB" [ incoming flows: "Manage Notifications, Events and Rules.Notifications, Sensor Data and Events" , "Manage Rules, View Sensor Data .Rules, Registration Information" outgoing flows: "Credentials 2" [ source: "Customer DB" targets: "Authentication and Token" ] , "Sensor Data 3" [ source: "Customer DB" targets: "Manage Rules, View Sensor Data " ] ] , 
 ExternalEntity "Customer Client" [ incoming flows: "Authentication and Token.Credentials and Token 1" outgoing flows: "Credentials and Token" [ source: "Customer Client" targets: "Authentication and Token" ] , Requests [ source: "Customer Client" targets: "Manage Rules, View Sensor Data " ] ] 
 

@@ -120,17 +120,6 @@
           <styles xmi:type="notation:ShapeStyle" xmi:id="_d3ssAXVdEem18JEHme68Yg" fontName="Segoe UI" fontHeight="12"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_d3ssAnVdEem18JEHme68Yg" x="1545" y="450" width="90" height="39"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_lNZHMHVdEem18JEHme68Yg" type="2001" element="_lNWq8HVdEem18JEHme68Yg">
-          <children xmi:type="notation:Node" xmi:id="_lNZHM3VdEem18JEHme68Yg" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_lNZHNHVdEem18JEHme68Yg" y="5"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_lNZuQHVdEem18JEHme68Yg" type="3016" element="_lNWq8XVdEem18JEHme68Yg">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_lNZuQXVdEem18JEHme68Yg" fontName="Segoe UI"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lNZuQnVdEem18JEHme68Yg"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_lNZHMXVdEem18JEHme68Yg" fontName="Segoe UI" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lNZHMnVdEem18JEHme68Yg" x="1915" y="340" width="100" height="100"/>
-        </children>
         <children xmi:type="notation:Node" xmi:id="_pGBloHVdEem18JEHme68Yg" type="2001" element="_pF_JYHVdEem18JEHme68Yg">
           <children xmi:type="notation:Node" xmi:id="_pGBlo3VdEem18JEHme68Yg" type="5002">
             <layoutConstraint xmi:type="notation:Location" xmi:id="_pGBlpHVdEem18JEHme68Yg" y="5"/>
@@ -141,17 +130,6 @@
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_pGBloXVdEem18JEHme68Yg" fontName="Segoe UI" fontHeight="12"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pGBlonVdEem18JEHme68Yg" x="1915" y="475" width="100" height="100"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_rQ_BUHVdEem18JEHme68Yg" type="2001" element="_rQ8lEHVdEem18JEHme68Yg">
-          <children xmi:type="notation:Node" xmi:id="_rQ_BU3VdEem18JEHme68Yg" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_rQ_BVHVdEem18JEHme68Yg" y="5"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_rRAPcHVdEem18JEHme68Yg" type="3016" element="_rQ8lEXVdEem18JEHme68Yg">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_rRAPcXVdEem18JEHme68Yg" fontName="Segoe UI"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rRAPcnVdEem18JEHme68Yg"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_rQ_BUXVdEem18JEHme68Yg" fontName="Segoe UI" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rQ_BUnVdEem18JEHme68Yg" x="1915" y="625" width="100" height="100"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_wTDNAHVdEem18JEHme68Yg" type="2001" element="_wTAwwHVdEem18JEHme68Yg">
           <children xmi:type="notation:Node" xmi:id="_wTDNA3VdEem18JEHme68Yg" type="5002">
@@ -417,54 +395,6 @@
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9o9zWnVfEem18JEHme68Yg" id="(1.0,0.4)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9o9zW3VfEem18JEHme68Yg" id="(0.0,0.5)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_A9HEoHVgEem18JEHme68Yg" type="4001" element="_A9EokHVgEem18JEHme68Yg" source="_06nDcnVcEem18JEHme68Yg" target="_d3ssAHVdEem18JEHme68Yg">
-          <children xmi:type="notation:Node" xmi:id="_A9HEpHVgEem18JEHme68Yg" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_A9HEpXVgEem18JEHme68Yg" x="-2" y="-11"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_A9HEpnVgEem18JEHme68Yg" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_A9HEp3VgEem18JEHme68Yg" x="-1" y="8"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_A9HEqHVgEem18JEHme68Yg" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_A9HEqXVgEem18JEHme68Yg" x="-3" y="7"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_A9HEoXVgEem18JEHme68Yg"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_A9HEonVgEem18JEHme68Yg" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_A9HEo3VgEem18JEHme68Yg" points="[1, -2, -959, 12]$[960, -5, 0, 9]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A9HEqnVgEem18JEHme68Yg" id="(0.99,0.69)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A9HEq3VgEem18JEHme68Yg" id="(0.044444444444444446,0.6410256410256411)"/>
-        </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_NF1J8HVgEem18JEHme68Yg" type="4001" element="_NFqyNHVgEem18JEHme68Yg" source="_d3ssAHVdEem18JEHme68Yg" target="_lNZHMHVdEem18JEHme68Yg">
-          <children xmi:type="notation:Node" xmi:id="_NF1J9HVgEem18JEHme68Yg" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NF1J9XVgEem18JEHme68Yg" x="-48" y="-20"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_NF1xAHVgEem18JEHme68Yg" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NF1xAXVgEem18JEHme68Yg" x="-29" y="-17"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_NF1xAnVgEem18JEHme68Yg" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NF1xA3VgEem18JEHme68Yg" x="-1" y="10"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_NF1J8XVgEem18JEHme68Yg"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_NF1J8nVgEem18JEHme68Yg" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_NF1J83VgEem18JEHme68Yg" points="[23, -3, -344, 93]$[367, -96, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_NF1xBHVgEem18JEHme68Yg" id="(0.03333333333333333,0.15384615384615385)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_NF1xBXVgEem18JEHme68Yg" id="(0.0,0.2)"/>
-        </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_N4TvwHVgEem18JEHme68Yg" type="4001" element="_N4Iw-nVgEem18JEHme68Yg" source="_lNZHMHVdEem18JEHme68Yg" target="_d3ssAHVdEem18JEHme68Yg">
-          <children xmi:type="notation:Node" xmi:id="_N4TvxHVgEem18JEHme68Yg" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_N4TvxXVgEem18JEHme68Yg" x="-59" y="-25"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_N4TvxnVgEem18JEHme68Yg" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_N4Tvx3VgEem18JEHme68Yg" x="5" y="8"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_N4UW0HVgEem18JEHme68Yg" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_N4UW0XVgEem18JEHme68Yg" x="3" y="10"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_N4TvwXVgEem18JEHme68Yg"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_N4TvwnVgEem18JEHme68Yg" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_N4Tvw3VgEem18JEHme68Yg" points="[0, 0, 283, -76]$[-284, 70, -1, -6]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_N4UW0nVgEem18JEHme68Yg" id="(0.0,0.45)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_N4UW03VgEem18JEHme68Yg" id="(0.9666666666666667,0.28205128205128205)"/>
-        </edges>
         <edges xmi:type="notation:Edge" xmi:id="_jhZ_IHVgEem18JEHme68Yg" type="4001" element="_jhPncHVgEem18JEHme68Yg" source="_d3ssAHVdEem18JEHme68Yg" target="_pGBloHVdEem18JEHme68Yg">
           <children xmi:type="notation:Node" xmi:id="_jhamMHVgEem18JEHme68Yg" type="6001">
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jhamMXVgEem18JEHme68Yg" x="59" y="-24"/>
@@ -496,86 +426,6 @@
           <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kQ4UQ3VgEem18JEHme68Yg" points="[0, 0, 280, 40]$[-280, -40, 0, 0]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kQ47VnVgEem18JEHme68Yg" id="(0.0,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kQ47V3VgEem18JEHme68Yg" id="(1.0,0.8974358974358975)"/>
-        </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_mPXaMHVgEem18JEHme68Yg" type="4001" element="_mPTJLHVgEem18JEHme68Yg" source="_rQ_BUHVdEem18JEHme68Yg" target="_d3ssAHVdEem18JEHme68Yg">
-          <children xmi:type="notation:Node" xmi:id="_mPXaNHVgEem18JEHme68Yg" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mPXaNXVgEem18JEHme68Yg" x="-91" y="42"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_mPXaNnVgEem18JEHme68Yg" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mPXaN3VgEem18JEHme68Yg" x="2" y="11"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_mPXaOHVgEem18JEHme68Yg" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mPXaOXVgEem18JEHme68Yg" x="2" y="10"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_mPXaMXVgEem18JEHme68Yg"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_mPXaMnVgEem18JEHme68Yg" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_mPXaM3VgEem18JEHme68Yg" points="[0, 0, 327, 189]$[-323, -189, 4, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_mPXaOnVgEem18JEHme68Yg" id="(0.0,0.5)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_mPXaO3VgEem18JEHme68Yg" id="(0.4777777777777778,0.9230769230769231)"/>
-        </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_n9pg8HVgEem18JEHme68Yg" type="4001" element="_n9ko4nVgEem18JEHme68Yg" source="_d3ssAHVdEem18JEHme68Yg" target="_rQ_BUHVdEem18JEHme68Yg">
-          <children xmi:type="notation:Node" xmi:id="_n9qIAHVgEem18JEHme68Yg" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_n9qIAXVgEem18JEHme68Yg" x="-43" y="45"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_n9qIAnVgEem18JEHme68Yg" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_n9qIA3VgEem18JEHme68Yg" x="-24" y="27"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_n9qIBHVgEem18JEHme68Yg" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_n9qIBXVgEem18JEHme68Yg" y="10"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_n9pg8XVgEem18JEHme68Yg"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_n9pg8nVgEem18JEHme68Yg" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_n9pg83VgEem18JEHme68Yg" points="[0, 0, -360, -211]$[360, 211, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_n9qIBnVgEem18JEHme68Yg" id="(0.1111111111111111,1.0)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_n9qIB3VgEem18JEHme68Yg" id="(0.0,0.75)"/>
-        </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_5YSy4HVgEem18JEHme68Yg" type="4001" element="_5YJB43VgEem18JEHme68Yg" source="_wTDNAHVdEem18JEHme68Yg" target="_lNZHMHVdEem18JEHme68Yg">
-          <children xmi:type="notation:Node" xmi:id="_5YSy5HVgEem18JEHme68Yg" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5YSy5XVgEem18JEHme68Yg" x="12" y="27"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_5YSy5nVgEem18JEHme68Yg" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5YSy53VgEem18JEHme68Yg" y="10"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_5YSy6HVgEem18JEHme68Yg" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5YSy6XVgEem18JEHme68Yg" y="10"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_5YSy4XVgEem18JEHme68Yg"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_5YSy4nVgEem18JEHme68Yg" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_5YSy43VgEem18JEHme68Yg" points="[0, 0, 220, 100]$[-220, -100, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_5YSy6nVgEem18JEHme68Yg" id="(0.0,0.34)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_5YSy63VgEem18JEHme68Yg" id="(1.0,0.45)"/>
-        </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_57mUQHVgEem18JEHme68Yg" type="4001" element="_57b8q3VgEem18JEHme68Yg" source="_wTDNAHVdEem18JEHme68Yg" target="_pGBloHVdEem18JEHme68Yg">
-          <children xmi:type="notation:Node" xmi:id="_57mURHVgEem18JEHme68Yg" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_57mURXVgEem18JEHme68Yg" y="-10"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_57mURnVgEem18JEHme68Yg" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_57mUR3VgEem18JEHme68Yg" y="10"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_57mUSHVgEem18JEHme68Yg" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_57mUSXVgEem18JEHme68Yg" y="10"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_57mUQXVgEem18JEHme68Yg"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_57mUQnVgEem18JEHme68Yg" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_57mUQ3VgEem18JEHme68Yg" points="[0, 0, 220, 0]$[-220, 0, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_57mUSnVgEem18JEHme68Yg" id="(0.0,0.74)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_57mUS3VgEem18JEHme68Yg" id="(1.0,0.5)"/>
-        </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_6yAX0HVgEem18JEHme68Yg" type="4001" element="_6x98FHVgEem18JEHme68Yg" source="_wTDNAHVdEem18JEHme68Yg" target="_rQ_BUHVdEem18JEHme68Yg">
-          <children xmi:type="notation:Node" xmi:id="_6yA-4HVgEem18JEHme68Yg" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6yA-4XVgEem18JEHme68Yg" x="-16" y="-40"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_6yA-4nVgEem18JEHme68Yg" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6yA-43VgEem18JEHme68Yg" x="3" y="10"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_6yA-5HVgEem18JEHme68Yg" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6yA-5XVgEem18JEHme68Yg" y="11"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_6yAX0XVgEem18JEHme68Yg"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_6yAX0nVgEem18JEHme68Yg" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_6yAX03VgEem18JEHme68Yg" points="[-4, 3, 220, -155]$[-224, 158, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_6yA-5nVgEem18JEHme68Yg" id="(0.04,0.96)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_6yA-53VgEem18JEHme68Yg" id="(1.0,0.8)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_IfnXUHVhEem18JEHme68Yg" type="4001" element="_IfZVanVhEem18JEHme68Yg" source="_d3ssAHVdEem18JEHme68Yg" target="_y1bDIHVdEem18JEHme68Yg">
           <children xmi:type="notation:Node" xmi:id="_IfnXVHVhEem18JEHme68Yg" type="6001">
@@ -641,53 +491,21 @@
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lnAkSnVhEem18JEHme68Yg" id="(1.0,0.7692307692307693)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lnAkS3VhEem18JEHme68Yg" id="(0.0,0.4)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_qURkoHVhEem18JEHme68Yg" type="4001" element="_qUHNFHVhEem18JEHme68Yg" source="_lNZHMHVdEem18JEHme68Yg" target="_y1bDIHVdEem18JEHme68Yg">
-          <children xmi:type="notation:Node" xmi:id="_qURkpHVhEem18JEHme68Yg" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qURkpXVhEem18JEHme68Yg" x="14" y="-35"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_qURkpnVhEem18JEHme68Yg" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qURkp3VhEem18JEHme68Yg" x="25" y="-31"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_qURkqHVhEem18JEHme68Yg" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qURkqXVhEem18JEHme68Yg" y="10"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_qURkoXVhEem18JEHme68Yg"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_qURkonVhEem18JEHme68Yg" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qURko3VhEem18JEHme68Yg" points="[0, 0, 75, 150]$[-75, -150, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_qUUA4HVhEem18JEHme68Yg" id="(0.35,0.0)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_qUUA4XVhEem18JEHme68Yg" id="(0.59,1.0)"/>
-        </edges>
         <edges xmi:type="notation:Edge" xmi:id="_tQYwcHVhEem18JEHme68Yg" type="4001" element="_tQLVuHVhEem18JEHme68Yg" source="_pGBloHVdEem18JEHme68Yg" target="_y1bDIHVdEem18JEHme68Yg">
           <children xmi:type="notation:Node" xmi:id="_tQYwdHVhEem18JEHme68Yg" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tQYwdXVhEem18JEHme68Yg" x="104" y="-17"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tQYwdXVhEem18JEHme68Yg" x="10" y="3"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_tQYwdnVhEem18JEHme68Yg" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tQYwd3VhEem18JEHme68Yg" x="-9" y="4"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tQYwd3VhEem18JEHme68Yg" x="-10" y="-3"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_tQYweHVhEem18JEHme68Yg" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tQYweXVhEem18JEHme68Yg" x="-8" y="-6"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tQYweXVhEem18JEHme68Yg" x="-10" y="-3"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_tQYwcXVhEem18JEHme68Yg"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_tQYwcnVhEem18JEHme68Yg" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_tQYwc3VhEem18JEHme68Yg" points="[0, 0, 90, 285]$[55, -115, 145, 170]$[-90, -285, 0, 0]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_tQYwc3VhEem18JEHme68Yg" points="[0, 0, 90, 285]$[-90, -285, 0, 0]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_tQYwenVhEem18JEHme68Yg" id="(0.65,0.0)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_tQYwe3VhEem18JEHme68Yg" id="(0.74,1.0)"/>
-        </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_zwfAYHVhEem18JEHme68Yg" type="4001" element="_zwb9lHVhEem18JEHme68Yg" source="_rQ_BUHVdEem18JEHme68Yg" target="_y1bDIHVdEem18JEHme68Yg">
-          <children xmi:type="notation:Node" xmi:id="_zwfAZHVhEem18JEHme68Yg" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zwfAZXVhEem18JEHme68Yg" x="28" y="38"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_zwfAZnVhEem18JEHme68Yg" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zwfAZ3VhEem18JEHme68Yg" x="-6" y="5"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_zwfAaHVhEem18JEHme68Yg" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zwfAaXVhEem18JEHme68Yg" y="-8"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_zwfAYXVhEem18JEHme68Yg"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_zwfAYnVhEem18JEHme68Yg" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_zwfAY3VhEem18JEHme68Yg" points="[0, 0, 65, 452]$[125, -270, 190, 182]$[-49, -436, 16, 16]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_zwfAanVhEem18JEHme68Yg" id="(0.5,0.0)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_zwfAa3VhEem18JEHme68Yg" id="(0.84,0.83)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_J2uewHViEem18JEHme68Yg" type="4001" element="_J2kG1HViEem18JEHme68Yg" source="_J9vCgHVeEem18JEHme68Yg" target="_y1bDIHVdEem18JEHme68Yg">
           <children xmi:type="notation:Node" xmi:id="_J2uexHViEem18JEHme68Yg" type="6001">
@@ -753,22 +571,6 @@
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_djI_CnViEem18JEHme68Yg" id="(0.0,0.35)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_djI_C3ViEem18JEHme68Yg" id="(1.0,0.2564102564102564)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_jde2gHViEem18JEHme68Yg" type="4001" element="_jdO_rHViEem18JEHme68Yg" source="_SXGWoHVdEem18JEHme68Yg" target="_lNZHMHVdEem18JEHme68Yg">
-          <children xmi:type="notation:Node" xmi:id="_jde2hHViEem18JEHme68Yg" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jde2hXViEem18JEHme68Yg" x="-199" y="-46"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_jde2hnViEem18JEHme68Yg" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jde2h3ViEem18JEHme68Yg" x="71" y="-22"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_jde2iHViEem18JEHme68Yg" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jde2iXViEem18JEHme68Yg" x="1" y="9"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_jde2gXViEem18JEHme68Yg"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_jde2gnViEem18JEHme68Yg" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_jde2g3ViEem18JEHme68Yg" points="[18, 6, -656, -255]$[658, 254, -16, -7]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jde2inViEem18JEHme68Yg" id="(0.82,0.11)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jde2i3ViEem18JEHme68Yg" id="(0.16,0.12)"/>
-        </edges>
         <edges xmi:type="notation:Edge" xmi:id="_wssp0HViEem18JEHme68Yg" type="4001" element="_wshrgnViEem18JEHme68Yg" source="_SXGWoHVdEem18JEHme68Yg" target="_pGBloHVdEem18JEHme68Yg">
           <children xmi:type="notation:Node" xmi:id="_wssp1HViEem18JEHme68Yg" type="6001">
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wssp1XViEem18JEHme68Yg" x="1" y="-11"/>
@@ -784,22 +586,6 @@
           <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_wssp03ViEem18JEHme68Yg" points="[0, 0, -669, -335]$[666, 335, -3, 0]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_wssp2nViEem18JEHme68Yg" id="(1.0,0.6)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_wssp23ViEem18JEHme68Yg" id="(0.29,0.0)"/>
-        </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_4Nh-AHViEem18JEHme68Yg" type="4001" element="_4Nfig3ViEem18JEHme68Yg" source="_SXGWoHVdEem18JEHme68Yg" target="_rQ_BUHVdEem18JEHme68Yg">
-          <children xmi:type="notation:Node" xmi:id="_4NilEHViEem18JEHme68Yg" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4NilEXViEem18JEHme68Yg" x="-152" y="65"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_4NilEnViEem18JEHme68Yg" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4NilE3ViEem18JEHme68Yg" x="69" y="-20"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_4NilFHViEem18JEHme68Yg" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4NilFXViEem18JEHme68Yg" x="6" y="8"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_4Nh-AXViEem18JEHme68Yg"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_4Nh-AnViEem18JEHme68Yg" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_4Nh-A3ViEem18JEHme68Yg" points="[0, 0, -668, -493]$[230, 165, -438, -328]$[640, 472, -28, -21]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4NilFnViEem18JEHme68Yg" id="(1.0,0.75)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4NilF3ViEem18JEHme68Yg" id="(0.28,0.23)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_J1WwUHVjEem18JEHme68Yg" type="4001" element="_J1UUcHVjEem18JEHme68Yg" source="_--_dAHVdEem18JEHme68Yg" target="_3By88HVdEem18JEHme68Yg">
           <children xmi:type="notation:Node" xmi:id="_J1XXYHVjEem18JEHme68Yg" type="6001">
@@ -849,6 +635,38 @@
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_dcKllHVoEemVXrKjgmiJWA" id="(0.0,0.75)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_dcKllXVoEemVXrKjgmiJWA" id="(1.0,0.5)"/>
         </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_LXW_gHVsEemoIdBgMpkKkA" type="4001" element="_LW8v0HVsEemoIdBgMpkKkA" source="_y1bDIHVdEem18JEHme68Yg" target="_J9vCgHVeEem18JEHme68Yg">
+          <children xmi:type="notation:Node" xmi:id="_LXh-oHVsEemoIdBgMpkKkA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LXh-oXVsEemoIdBgMpkKkA" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_LXjMwHVsEemoIdBgMpkKkA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LXjMwXVsEemoIdBgMpkKkA" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_LXka4HVsEemoIdBgMpkKkA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LXka4XVsEemoIdBgMpkKkA" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_LXW_gXVsEemoIdBgMpkKkA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_LXW_gnVsEemoIdBgMpkKkA" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_LXW_g3VsEemoIdBgMpkKkA" points="[0, 0, -229, 145]$[229, -145, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_LXoFQHVsEemoIdBgMpkKkA" id="(1.0,0.3)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_LXoFQXVsEemoIdBgMpkKkA" id="(0.09,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_qkLn4HVsEemoIdBgMpkKkA" type="4001" element="_qkB3rHVsEemoIdBgMpkKkA" source="_wTDNAHVdEem18JEHme68Yg" target="_pGBloHVdEem18JEHme68Yg">
+          <children xmi:type="notation:Node" xmi:id="_qkLn5HVsEemoIdBgMpkKkA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qkLn5XVsEemoIdBgMpkKkA" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_qkLn5nVsEemoIdBgMpkKkA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qkLn53VsEemoIdBgMpkKkA" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_qkLn6HVsEemoIdBgMpkKkA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qkLn6XVsEemoIdBgMpkKkA" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_qkLn4XVsEemoIdBgMpkKkA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_qkLn4nVsEemoIdBgMpkKkA" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qkLn43VsEemoIdBgMpkKkA" points="[-50, 3, 270, -21]$[-270, 20, 50, -4]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_qkLn6nVsEemoIdBgMpkKkA" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_qkLn63VsEemoIdBgMpkKkA" id="(0.5,0.5)"/>
+        </edges>
       </data>
     </ownedAnnotationEntries>
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_x9WoIHVcEem18JEHme68Yg" name="Mote" outgoingEdges="_WdKXoHVeEem18JEHme68Yg" incomingEdges="_aKT-03VeEem18JEHme68Yg" width="10" height="10" resizeKind="NSEW">
@@ -862,7 +680,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='ExternalEntity']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_wTAwwHVdEem18JEHme68Yg" name="Operation Client" outgoingEdges="_5YJB43VgEem18JEHme68Yg _57b8q3VgEem18JEHme68Yg _6x98FHVgEem18JEHme68Yg _T6YLAHVhEem18JEHme68Yg" incomingEdges="_VCQYtnVhEem18JEHme68Yg" width="10" height="10" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_wTAwwHVdEem18JEHme68Yg" name="Operation Client" outgoingEdges="_T6YLAHVhEem18JEHme68Yg _qkB3rHVsEemoIdBgMpkKkA" incomingEdges="_VCQYtnVhEem18JEHme68Yg" width="10" height="10" resizeKind="NSEW">
       <target xmi:type="eDFDFlowTracking:ExternalEntity" href="src/eDFD.mydsl#Operation Client"/>
       <semanticElements xmi:type="eDFDFlowTracking:ExternalEntity" href="src/eDFD.mydsl#Operation Client"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -873,7 +691,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='ExternalEntity']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_J9smQHVeEem18JEHme68Yg" name="Customer Client" outgoingEdges="_J2kG1HViEem18JEHme68Yg _ZI_ImnViEem18JEHme68Yg" width="10" height="10" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_J9smQHVeEem18JEHme68Yg" name="Customer Client" outgoingEdges="_J2kG1HViEem18JEHme68Yg _ZI_ImnViEem18JEHme68Yg" incomingEdges="_LW8v0HVsEemoIdBgMpkKkA" width="10" height="10" resizeKind="NSEW">
       <target xmi:type="eDFDFlowTracking:ExternalEntity" href="src/eDFD.mydsl#Customer Client"/>
       <semanticElements xmi:type="eDFDFlowTracking:ExternalEntity" href="src/eDFD.mydsl#Customer Client"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -884,7 +702,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='ExternalEntity']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_06lOQHVcEem18JEHme68Yg" name="Handle Sensor Data and Motes" outgoingEdges="_aKT-03VeEem18JEHme68Yg _lKiyEHVeEem18JEHme68Yg _9ozbiHVfEem18JEHme68Yg _A9EokHVgEem18JEHme68Yg" incomingEdges="_WdKXoHVeEem18JEHme68Yg _3LiSXnVeEem18JEHme68Yg" width="10" height="10" resizeKind="NORTH_SOUTH">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_06lOQHVcEem18JEHme68Yg" name="Handle Sensor Data and Motes" outgoingEdges="_aKT-03VeEem18JEHme68Yg _lKiyEHVeEem18JEHme68Yg _9ozbiHVfEem18JEHme68Yg" incomingEdges="_WdKXoHVeEem18JEHme68Yg _3LiSXnVeEem18JEHme68Yg" width="10" height="10" resizeKind="NORTH_SOUTH">
       <target xmi:type="eDFDFlowTracking:Process" href="src/eDFD.mydsl#Handle Sensor Data and Motes"/>
       <semanticElements xmi:type="eDFDFlowTracking:Process" href="src/eDFD.mydsl#Handle Sensor Data and Motes"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -906,7 +724,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Process']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_SXD6YHVdEem18JEHme68Yg" name="DB Monitor to Storage" outgoingEdges="_SbIQJnVfEem18JEHme68Yg _VXJ8ZnVfEem18JEHme68Yg _jdO_rHViEem18JEHme68Yg _wshrgnViEem18JEHme68Yg _4Nfig3ViEem18JEHme68Yg" incomingEdges="_rXMsUHVfEem18JEHme68Yg _9ozbiHVfEem18JEHme68Yg" width="10" height="10" resizeKind="NORTH_SOUTH">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_SXD6YHVdEem18JEHme68Yg" name="DB Monitor to Storage" outgoingEdges="_SbIQJnVfEem18JEHme68Yg _VXJ8ZnVfEem18JEHme68Yg _wshrgnViEem18JEHme68Yg" incomingEdges="_rXMsUHVfEem18JEHme68Yg _9ozbiHVfEem18JEHme68Yg" width="10" height="10" resizeKind="NORTH_SOUTH">
       <target xmi:type="eDFDFlowTracking:Process" href="src/eDFD.mydsl#DB Monitor to Storage"/>
       <semanticElements xmi:type="eDFDFlowTracking:Process" href="src/eDFD.mydsl#DB Monitor to Storage"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -928,18 +746,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Process']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_lNWq8HVdEem18JEHme68Yg" name="View Logs" outgoingEdges="_N4Iw-nVgEem18JEHme68Yg _qUHNFHVhEem18JEHme68Yg" incomingEdges="_NFqyNHVgEem18JEHme68Yg _5YJB43VgEem18JEHme68Yg _jdO_rHViEem18JEHme68Yg" width="10" height="10" resizeKind="NORTH_SOUTH">
-      <target xmi:type="eDFDFlowTracking:Process" href="src/eDFD.mydsl#View Logs"/>
-      <semanticElements xmi:type="eDFDFlowTracking:Process" href="src/eDFD.mydsl#View Logs"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:Ellipse" uid="_lNWq8XVdEem18JEHme68Yg" labelSize="12" borderSize="2" borderSizeComputationExpression="2" labelPosition="node" color="255,255,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Process']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Process']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_pF_JYHVdEem18JEHme68Yg" name="View Sensors Data" outgoingEdges="_kQsHZnVgEem18JEHme68Yg _tQLVuHVhEem18JEHme68Yg" incomingEdges="_jhPncHVgEem18JEHme68Yg _57b8q3VgEem18JEHme68Yg _wshrgnViEem18JEHme68Yg" width="10" height="10" resizeKind="NORTH_SOUTH">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_pF_JYHVdEem18JEHme68Yg" name="View Sensors Data" outgoingEdges="_kQsHZnVgEem18JEHme68Yg _tQLVuHVhEem18JEHme68Yg" incomingEdges="_jhPncHVgEem18JEHme68Yg _wshrgnViEem18JEHme68Yg _qkB3rHVsEemoIdBgMpkKkA" width="10" height="10" resizeKind="NORTH_SOUTH">
       <target xmi:type="eDFDFlowTracking:Process" href="src/eDFD.mydsl#View Sensors Data"/>
       <semanticElements xmi:type="eDFDFlowTracking:Process" href="src/eDFD.mydsl#View Sensors Data"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -950,18 +757,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Process']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_rQ8lEHVdEem18JEHme68Yg" name="View Customers" outgoingEdges="_mPTJLHVgEem18JEHme68Yg _zwb9lHVhEem18JEHme68Yg" incomingEdges="_n9ko4nVgEem18JEHme68Yg _6x98FHVgEem18JEHme68Yg _4Nfig3ViEem18JEHme68Yg" width="10" height="10" resizeKind="NORTH_SOUTH">
-      <target xmi:type="eDFDFlowTracking:Process" href="src/eDFD.mydsl#View Customers"/>
-      <semanticElements xmi:type="eDFDFlowTracking:Process" href="src/eDFD.mydsl#View Customers"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:Ellipse" uid="_rQ8lEXVdEem18JEHme68Yg" labelSize="12" borderSize="2" borderSizeComputationExpression="2" labelPosition="node" color="255,255,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Process']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Process']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_y1Ym4HVdEem18JEHme68Yg" name="Authentication and Token" outgoingEdges="_VCQYtnVhEem18JEHme68Yg" incomingEdges="_IfZVanVhEem18JEHme68Yg _T6YLAHVhEem18JEHme68Yg _lmtC3HVhEem18JEHme68Yg _qUHNFHVhEem18JEHme68Yg _tQLVuHVhEem18JEHme68Yg _zwb9lHVhEem18JEHme68Yg _J2kG1HViEem18JEHme68Yg _acnTC3ViEem18JEHme68Yg" width="10" height="10" resizeKind="NORTH_SOUTH">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_y1Ym4HVdEem18JEHme68Yg" name="Authentication and Token" outgoingEdges="_VCQYtnVhEem18JEHme68Yg _LW8v0HVsEemoIdBgMpkKkA" incomingEdges="_IfZVanVhEem18JEHme68Yg _T6YLAHVhEem18JEHme68Yg _lmtC3HVhEem18JEHme68Yg _tQLVuHVhEem18JEHme68Yg _J2kG1HViEem18JEHme68Yg _acnTC3ViEem18JEHme68Yg" width="10" height="10" resizeKind="NORTH_SOUTH">
       <target xmi:type="eDFDFlowTracking:Process" href="src/eDFD.mydsl#Authentication and Token"/>
       <semanticElements xmi:type="eDFDFlowTracking:Process" href="src/eDFD.mydsl#Authentication and Token"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -1016,7 +812,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='DataStore']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_d3qPwHVdEem18JEHme68Yg" name="Operator DB " outgoingEdges="_NFqyNHVgEem18JEHme68Yg _jhPncHVgEem18JEHme68Yg _n9ko4nVgEem18JEHme68Yg _IfZVanVhEem18JEHme68Yg" incomingEdges="_A9EokHVgEem18JEHme68Yg _N4Iw-nVgEem18JEHme68Yg _kQsHZnVgEem18JEHme68Yg _mPTJLHVgEem18JEHme68Yg" width="-1" height="-1" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_d3qPwHVdEem18JEHme68Yg" name="Operator DB " outgoingEdges="_jhPncHVgEem18JEHme68Yg _IfZVanVhEem18JEHme68Yg" incomingEdges="_kQsHZnVgEem18JEHme68Yg" width="-1" height="-1" resizeKind="NSEW">
       <target xmi:type="eDFDFlowTracking:DataStore" href="src/eDFD.mydsl#Operator DB "/>
       <semanticElements xmi:type="eDFDFlowTracking:DataStore" href="src/eDFD.mydsl#Operator DB "/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -1168,39 +964,9 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_A9EokHVgEem18JEHme68Yg" name="Notifications" sourceNode="_06lOQHVcEem18JEHme68Yg" targetNode="_d3qPwHVdEem18JEHme68Yg" beginLabel="WiFi">
-      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Notifications"/>
-      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Notifications"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_A9EokXVgEem18JEHme68Yg" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
-        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_A9EoknVgEem18JEHme68Yg" labelSize="12"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_A9Eok3VgEem18JEHme68Yg" labelSize="12"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_NFqyNHVgEem18JEHme68Yg" name="Record Actions 1" sourceNode="_d3qPwHVdEem18JEHme68Yg" targetNode="_lNWq8HVdEem18JEHme68Yg" beginLabel="WiFi">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_jhPncHVgEem18JEHme68Yg" name="Record Actions 1" sourceNode="_d3qPwHVdEem18JEHme68Yg" targetNode="_pF_JYHVdEem18JEHme68Yg" beginLabel="WiFi">
       <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Record Actions 1"/>
       <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Record Actions 1"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_NFqyNXVgEem18JEHme68Yg" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
-        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_NFqyNnVgEem18JEHme68Yg" labelSize="12"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_NFqyN3VgEem18JEHme68Yg" labelSize="12"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_N4Iw-nVgEem18JEHme68Yg" name="Record Actions 2" sourceNode="_lNWq8HVdEem18JEHme68Yg" targetNode="_d3qPwHVdEem18JEHme68Yg" beginLabel="WiFi">
-      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Record Actions 2"/>
-      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Record Actions 2"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_N4Iw-3VgEem18JEHme68Yg" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
-        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_N4Iw_HVgEem18JEHme68Yg" labelSize="12"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_N4Iw_XVgEem18JEHme68Yg" labelSize="12"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_jhPncHVgEem18JEHme68Yg" name="Record Actions 3" sourceNode="_d3qPwHVdEem18JEHme68Yg" targetNode="_pF_JYHVdEem18JEHme68Yg" beginLabel="WiFi">
-      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Record Actions 3"/>
-      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Record Actions 3"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_jhPncXVgEem18JEHme68Yg" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
         <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_jhPncnVgEem18JEHme68Yg" labelSize="12"/>
@@ -1208,63 +974,13 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_kQsHZnVgEem18JEHme68Yg" name="Record Actions 4" sourceNode="_pF_JYHVdEem18JEHme68Yg" targetNode="_d3qPwHVdEem18JEHme68Yg" beginLabel="WiFi">
-      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Record Actions 4"/>
-      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Record Actions 4"/>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_kQsHZnVgEem18JEHme68Yg" name="Record Actions 2" sourceNode="_pF_JYHVdEem18JEHme68Yg" targetNode="_d3qPwHVdEem18JEHme68Yg" beginLabel="WiFi">
+      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Record Actions 2"/>
+      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Record Actions 2"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_kQvxYHVgEem18JEHme68Yg" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
         <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_kQvxYXVgEem18JEHme68Yg" labelSize="12"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_kQvxYnVgEem18JEHme68Yg" labelSize="12"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_mPTJLHVgEem18JEHme68Yg" name="Record Actions 5" sourceNode="_rQ8lEHVdEem18JEHme68Yg" targetNode="_d3qPwHVdEem18JEHme68Yg" beginLabel="WiFi">
-      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Record Actions 5"/>
-      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Record Actions 5"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_mPUW4HVgEem18JEHme68Yg" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
-        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_mPUW4XVgEem18JEHme68Yg" labelSize="12"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_mPUW4nVgEem18JEHme68Yg" labelSize="12"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_n9ko4nVgEem18JEHme68Yg" name="Record Actions 6" sourceNode="_d3qPwHVdEem18JEHme68Yg" targetNode="_rQ8lEHVdEem18JEHme68Yg" beginLabel="WiFi">
-      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Record Actions 6"/>
-      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Record Actions 6"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_n9ko43VgEem18JEHme68Yg" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
-        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_n9ko5HVgEem18JEHme68Yg" labelSize="12"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_n9ko5XVgEem18JEHme68Yg" labelSize="12"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_5YJB43VgEem18JEHme68Yg" name="Requests 1" sourceNode="_wTAwwHVdEem18JEHme68Yg" targetNode="_lNWq8HVdEem18JEHme68Yg" beginLabel="WiFi">
-      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Requests 1"/>
-      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Requests 1"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_5YJB5HVgEem18JEHme68Yg" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
-        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_5YJB5XVgEem18JEHme68Yg" labelSize="12"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_5YJB5nVgEem18JEHme68Yg" labelSize="12"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_57b8q3VgEem18JEHme68Yg" name="Requests 2" sourceNode="_wTAwwHVdEem18JEHme68Yg" targetNode="_pF_JYHVdEem18JEHme68Yg" beginLabel="WiFi">
-      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Requests 2"/>
-      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Requests 2"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_57b8rHVgEem18JEHme68Yg" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
-        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_57b8rXVgEem18JEHme68Yg" labelSize="12"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_57b8rnVgEem18JEHme68Yg" labelSize="12"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_6x98FHVgEem18JEHme68Yg" name="Requests 3" sourceNode="_wTAwwHVdEem18JEHme68Yg" targetNode="_rQ8lEHVdEem18JEHme68Yg" beginLabel="WiFi">
-      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Requests 3"/>
-      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Requests 3"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_6x98FXVgEem18JEHme68Yg" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
-        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_6x98FnVgEem18JEHme68Yg" labelSize="12"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_6x98F3VgEem18JEHme68Yg" labelSize="12"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
     </ownedDiagramElements>
@@ -1278,9 +994,9 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_T6YLAHVhEem18JEHme68Yg" name="Credentials and Token 1" sourceNode="_wTAwwHVdEem18JEHme68Yg" targetNode="_y1Ym4HVdEem18JEHme68Yg" beginLabel="WiFi">
-      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Credentials and Token 1"/>
-      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Credentials and Token 1"/>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_T6YLAHVhEem18JEHme68Yg" name="Credentials and Token 2" sourceNode="_wTAwwHVdEem18JEHme68Yg" targetNode="_y1Ym4HVdEem18JEHme68Yg" beginLabel="WiFi">
+      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Credentials and Token 2"/>
+      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Credentials and Token 2"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_T6YLAXVhEem18JEHme68Yg" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
         <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_T6YLAnVhEem18JEHme68Yg" labelSize="12"/>
@@ -1288,9 +1004,9 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_VCQYtnVhEem18JEHme68Yg" name="Credentials and Token 2" sourceNode="_y1Ym4HVdEem18JEHme68Yg" targetNode="_wTAwwHVdEem18JEHme68Yg" beginLabel="WiFi">
-      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Credentials and Token 2"/>
-      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Credentials and Token 2"/>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_VCQYtnVhEem18JEHme68Yg" name="Credentials and Token 3" sourceNode="_y1Ym4HVdEem18JEHme68Yg" targetNode="_wTAwwHVdEem18JEHme68Yg" beginLabel="WiFi">
+      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Credentials and Token 3"/>
+      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Credentials and Token 3"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_VCQYt3VhEem18JEHme68Yg" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
         <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_VCQYuHVhEem18JEHme68Yg" labelSize="12"/>
@@ -1308,33 +1024,13 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_qUHNFHVhEem18JEHme68Yg" name="Token 1" sourceNode="_lNWq8HVdEem18JEHme68Yg" targetNode="_y1Ym4HVdEem18JEHme68Yg" beginLabel="WiFi">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_tQLVuHVhEem18JEHme68Yg" name="Token 1" sourceNode="_pF_JYHVdEem18JEHme68Yg" targetNode="_y1Ym4HVdEem18JEHme68Yg" beginLabel="WiFi">
       <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Token 1"/>
       <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Token 1"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_qUHNFXVhEem18JEHme68Yg" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
-        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_qUHNFnVhEem18JEHme68Yg" labelSize="12"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_qUHNF3VhEem18JEHme68Yg" labelSize="12"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_tQLVuHVhEem18JEHme68Yg" name="Token 2" sourceNode="_pF_JYHVdEem18JEHme68Yg" targetNode="_y1Ym4HVdEem18JEHme68Yg" beginLabel="WiFi">
-      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Token 2"/>
-      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Token 2"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_tQLVuXVhEem18JEHme68Yg" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
         <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_tQLVunVhEem18JEHme68Yg" labelSize="12"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_tQLVu3VhEem18JEHme68Yg" labelSize="12"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_zwb9lHVhEem18JEHme68Yg" name="Token 3" sourceNode="_rQ8lEHVdEem18JEHme68Yg" targetNode="_y1Ym4HVdEem18JEHme68Yg" beginLabel="WiFi">
-      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Token 3"/>
-      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Token 3"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_zwb9lXVhEem18JEHme68Yg" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
-        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_zwb9lnVhEem18JEHme68Yg" labelSize="12"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_zwb9l3VhEem18JEHme68Yg" labelSize="12"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
     </ownedDiagramElements>
@@ -1358,9 +1054,9 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_acnTC3ViEem18JEHme68Yg" name="Token" sourceNode="_3BwgsHVdEem18JEHme68Yg" targetNode="_y1Ym4HVdEem18JEHme68Yg" beginLabel="WiFi">
-      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Token"/>
-      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Token"/>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_acnTC3ViEem18JEHme68Yg" name="Token 2" sourceNode="_3BwgsHVdEem18JEHme68Yg" targetNode="_y1Ym4HVdEem18JEHme68Yg" beginLabel="WiFi">
+      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Token 2"/>
+      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Token 2"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_acnTDHViEem18JEHme68Yg" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
         <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_acnTDXViEem18JEHme68Yg" labelSize="12"/>
@@ -1378,16 +1074,6 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_jdO_rHViEem18JEHme68Yg" name="Sensor Data and Events 1" sourceNode="_SXD6YHVdEem18JEHme68Yg" targetNode="_lNWq8HVdEem18JEHme68Yg" beginLabel="WiFi">
-      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Sensor Data and Events 1"/>
-      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Sensor Data and Events 1"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_jdO_rXViEem18JEHme68Yg" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
-        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_jdO_rnViEem18JEHme68Yg" labelSize="12"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_jdO_r3ViEem18JEHme68Yg" labelSize="12"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
-    </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_wshrgnViEem18JEHme68Yg" name="Sensor Data and Events 2" sourceNode="_SXD6YHVdEem18JEHme68Yg" targetNode="_pF_JYHVdEem18JEHme68Yg" beginLabel="WiFi">
       <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Sensor Data and Events 2"/>
       <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Sensor Data and Events 2"/>
@@ -1395,16 +1081,6 @@
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
         <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_wshrhHViEem18JEHme68Yg" labelSize="12"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_wshrhXViEem18JEHme68Yg" labelSize="12"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_4Nfig3ViEem18JEHme68Yg" name="Sensor Data and Events 3" sourceNode="_SXD6YHVdEem18JEHme68Yg" targetNode="_rQ8lEHVdEem18JEHme68Yg" beginLabel="WiFi">
-      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Sensor Data and Events 3"/>
-      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Sensor Data and Events 3"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_4NfihHViEem18JEHme68Yg" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
-        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_4NfihXViEem18JEHme68Yg" labelSize="12"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_4NfihnViEem18JEHme68Yg" labelSize="12"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
     </ownedDiagramElements>
@@ -1435,6 +1111,26 @@
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
         <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_db1OYXVoEemVXrKjgmiJWA" labelSize="12"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_db1OYnVoEemVXrKjgmiJWA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_LW8v0HVsEemoIdBgMpkKkA" name="Credentials and Token 1" sourceNode="_y1Ym4HVdEem18JEHme68Yg" targetNode="_J9smQHVeEem18JEHme68Yg" beginLabel="WiFi">
+      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Credentials and Token 1"/>
+      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Credentials and Token 1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_LW998HVsEemoIdBgMpkKkA" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
+        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_LW998XVsEemoIdBgMpkKkA" labelSize="12"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_LW998nVsEemoIdBgMpkKkA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_qkB3rHVsEemoIdBgMpkKkA" name="Requests 1" sourceNode="_wTAwwHVdEem18JEHme68Yg" targetNode="_pF_JYHVdEem18JEHme68Yg" beginLabel="WiFi">
+      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Requests 1"/>
+      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Requests 1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_qkB3rXVsEemoIdBgMpkKkA" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
+        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_qkB3rnVsEemoIdBgMpkKkA" labelSize="12"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_qkB3r3VsEemoIdBgMpkKkA" labelSize="12"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
     </ownedDiagramElements>

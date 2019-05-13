@@ -51,7 +51,7 @@
             <beginLabelStyleDescription labelSize="12" labelExpression="feature:Channel">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </beginLabelStyleDescription>
-            <centerLabelStyleDescription labelSize="12" labelExpression="feature:Label">
+            <centerLabelStyleDescription labelSize="12" labelExpression="feature:name">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
           </style>

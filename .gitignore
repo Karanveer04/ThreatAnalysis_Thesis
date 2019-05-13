@@ -4,4 +4,5 @@
 /workspace/eDFDFlowTracking1.editor/.gitignore
 /workspace/eDFDFlowTracking1.tests/.gitignore
 /workspace/org.xtext.example.mydsl.ui.tests/.gitignore
+.txt
 

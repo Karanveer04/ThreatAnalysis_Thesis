@@ -746,9 +746,9 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='Process']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_pF_JYHVdEem18JEHme68Yg" name="View Sensors Data" outgoingEdges="_kQsHZnVgEem18JEHme68Yg _tQLVuHVhEem18JEHme68Yg" incomingEdges="_jhPncHVgEem18JEHme68Yg _wshrgnViEem18JEHme68Yg _qkB3rHVsEemoIdBgMpkKkA" width="10" height="10" resizeKind="NORTH_SOUTH">
-      <target xmi:type="eDFDFlowTracking:Process" href="src/eDFD.mydsl#View Sensors Data"/>
-      <semanticElements xmi:type="eDFDFlowTracking:Process" href="src/eDFD.mydsl#View Sensors Data"/>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_pF_JYHVdEem18JEHme68Yg" name="View Sensors Data, Logs, Customers" outgoingEdges="_kQsHZnVgEem18JEHme68Yg _tQLVuHVhEem18JEHme68Yg" incomingEdges="_jhPncHVgEem18JEHme68Yg _wshrgnViEem18JEHme68Yg _qkB3rHVsEemoIdBgMpkKkA" width="10" height="10" resizeKind="NORTH_SOUTH">
+      <target xmi:type="eDFDFlowTracking:Process" href="src/eDFD.mydsl#View Sensors Data, Logs, Customers"/>
+      <semanticElements xmi:type="eDFDFlowTracking:Process" href="src/eDFD.mydsl#View Sensors Data, Logs, Customers"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -1074,9 +1074,9 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_wshrgnViEem18JEHme68Yg" name="Sensor Data and Events 2" sourceNode="_SXD6YHVdEem18JEHme68Yg" targetNode="_pF_JYHVdEem18JEHme68Yg" beginLabel="WiFi">
-      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Sensor Data and Events 2"/>
-      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Sensor Data and Events 2"/>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_wshrgnViEem18JEHme68Yg" name="Sensor Data and Events" sourceNode="_SXD6YHVdEem18JEHme68Yg" targetNode="_pF_JYHVdEem18JEHme68Yg" beginLabel="WiFi">
+      <target xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Sensor Data and Events"/>
+      <semanticElements xmi:type="eDFDFlowTracking:Flow" href="src/eDFD.mydsl#Sensor Data and Events"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_wshrg3ViEem18JEHme68Yg" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@edgeMappings[name='Flow']/@style"/>
         <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_wshrhHViEem18JEHme68Yg" labelSize="12"/>

@@ -154,9 +154,13 @@ public class eSTRIDEMap {
 									|| elementAssetsList.get(j).getAssets().get(k).getValue().get(l).getPriority()
 											.getName().equals("M")) {
 
-								eSTRIDE_table.put(elementAssetsList.get(j).getName(),
-										mappedTable().get(elementAssetsList.get(j).getAssets().get(k).getValue().get(l)
-												.getObjective().getName()));
+								
+								if (StrideMap.get(elementAssetsList.get(j).getName()).contains(mappedTable().get(elementAssetsList.get(j).getAssets().get(k).getValue().get(l).getObjective().getName()))) {
+									eSTRIDE_table.put(elementAssetsList.get(j).getName(), mappedTable().get(elementAssetsList.get(j).getAssets().get(k).getValue().get(l).getObjective().getName()));
+								}
+//								eSTRIDE_table.put(elementAssetsList.get(j).getName(),
+//										mappedTable().get(elementAssetsList.get(j).getAssets().get(k).getValue().get(l)
+//												.getObjective().getName()));
 							}
 						}
 						if (StrideMap.get(elementAssetsList.get(j).getName()).contains("Spoofing")) {
@@ -187,8 +191,12 @@ public class eSTRIDEMap {
 									.equals("H")
 									|| flowAssetsList.get(j).getAssets().get(k).getValue().get(l).getPriority()
 											.getName().equals("M")) {
-								eSTRIDE_table.put(flowAssetsList.get(j).getName(), mappedTable().get(flowAssetsList
-										.get(j).getAssets().get(k).getValue().get(l).getObjective().getName()));
+								
+								if (StrideMap.get(flowAssetsList.get(j).getName()).contains(mappedTable().get(flowAssetsList.get(j).getAssets().get(k).getValue().get(l).getObjective().getName()))) {
+									eSTRIDE_table.put(flowAssetsList.get(j).getName(), mappedTable().get(flowAssetsList.get(j).getAssets().get(k).getValue().get(l).getObjective().getName()));
+								}
+//								eSTRIDE_table.put(flowAssetsList.get(j).getName(), mappedTable().get(flowAssetsList
+//										.get(j).getAssets().get(k).getValue().get(l).getObjective().getName()));
 							}
 						}
 					}

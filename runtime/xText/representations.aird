@@ -921,9 +921,9 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='eDFD']/@ownedRepresentations[name='extendedDFD']/@defaultLayer/@nodeMappings[name='ExternalEntity']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_wTAwwHVdEem18JEHme68Yg" name="Operation Client" outgoingEdges="_T6YLAHVhEem18JEHme68Yg _qkB3rHVsEemoIdBgMpkKkA _2SA3tHZMEemAMLzYPPGHgg _29YJDnZMEemAMLzYPPGHgg" incomingEdges="_VCQYtnVhEem18JEHme68Yg" width="10" height="10" resizeKind="NSEW">
-      <target xmi:type="eDFDFlowTracking:ExternalEntity" href="src/eDFD.mydsl#Operation Client"/>
-      <semanticElements xmi:type="eDFDFlowTracking:ExternalEntity" href="src/eDFD.mydsl#Operation Client"/>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_wTAwwHVdEem18JEHme68Yg" name="Company Client" outgoingEdges="_T6YLAHVhEem18JEHme68Yg _qkB3rHVsEemoIdBgMpkKkA _2SA3tHZMEemAMLzYPPGHgg _29YJDnZMEemAMLzYPPGHgg" incomingEdges="_VCQYtnVhEem18JEHme68Yg" width="10" height="10" resizeKind="NSEW">
+      <target xmi:type="eDFDFlowTracking:ExternalEntity" href="src/eDFD.mydsl#Company Client"/>
+      <semanticElements xmi:type="eDFDFlowTracking:ExternalEntity" href="src/eDFD.mydsl#Company Client"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>

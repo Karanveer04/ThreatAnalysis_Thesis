@@ -1,7 +1,7 @@
 # Architectural Threat Analysis
 
 ## Introduction
-This project contains file to create and evaluate the DFD diagrams by using eSTRIDE methodology.
+This project contains file to create DFD diagrams and extend them to eDFD by using eSTRIDE elements and then using the algorithm to retrieve the threat list.
 
 ### Pre-Requisites:
 - Eclipse environment

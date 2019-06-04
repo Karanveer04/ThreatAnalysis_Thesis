@@ -1,4 +1,4 @@
-EDFD HomeSystem[
+EDFD HomeSystemGroundTruth[
 	
 assets: Asset "Sensor Data Asset" values: [ L Av ] , [ ] , [ C ] source: Mote targets: "Customer Client" , "Company Client" , 
 Asset "Actuate Asset" values: [ M ] source: "Manage Events and Rules" targets: "Handle Sensor Data and Motes" , 
